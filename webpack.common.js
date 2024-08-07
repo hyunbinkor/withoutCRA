@@ -21,7 +21,11 @@ module.exports = {
   // 모듈(파일)을 해석하는 방식에 대해 설정
   resolve: {
     // 확장자가 명시되어 있지 않은 파일에 추정할 확장자 지정
-    extensions: ['.ts', '.tsx', '.js', 'jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      // @ 기호로 src인 것을 대체
+      '@': path.resolve(__dirname, 'src'),
+    }
   },
   // webpack에 추가적으로 설정한 loader에 대해서 설정
   module: {
@@ -48,7 +52,7 @@ module.exports = {
     }),
   ],
   // source-map을 어떻게 그릴지에 대한 규칙 설정
-  devtools: 'inline-source-map',
+  devtool: 'inline-source-map',
   // 로컬 개발 서버 설정
   devServer: {
     // localhost:8080에서 실행할 파일 경로 설정
