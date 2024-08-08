@@ -1,6 +1,12 @@
+import Footer from "./components/common/Footer";
+import Header from "./components/common/Header";
+import Code from "./pages/Code";
+
 const App = () => {
   return <>
-    <p>Hello World</p>
+    <Header />
+    <Code />
+    <Footer />
   </>;
 };
 
