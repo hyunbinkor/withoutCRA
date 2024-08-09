@@ -1,20 +1,21 @@
 import Svg from '@/components/Atomic/Svg';
-import useFromDate from '@components/Hook/useFromDate'
+import useFromDate from '@/utils/hook/useFromDate'
 
 interface Props {
   isFolder?: boolean;
+  fileName: string;
   commitMessage: string;
   mergeNumber?: number;
   commitDate: Date;
 }
 
-function FileTreeLine({
+function FileTreeDocumentLine({
   isFolder = false,
+  fileName,
   commitMessage,
   mergeNumber,
   commitDate,
 }: Props) {
-  // 에러 핸들링을 한 번 넣어주면 좋을듯? -> 데이터 유효성 검사를
 
   const fromCommitDate = useFromDate(commitDate);
 
@@ -22,13 +23,13 @@ function FileTreeLine({
     <tr className="filetree-document-line">
       <td className="filetree-document-line-filename">
         <Svg icon={isFolder ? 'folder' : 'file' } />
-        <a className="font-14 black">.github</a> 
+        <a className="font-14 black">{fileName}</a> 
       </td>
       <td className="filetree-document-line-commitmessage">
         <a className="font-14 gray-300">{commitMessage}</a>
         { mergeNumber ?? 
           <>
-            <a className="font-14 gray-300">(</a>
+            <a className="font-14 gray-300"> (</a>
             <a className="font-14 blue" href="">#6774</a>
             <a className="font-14 gray-300" href="">)</a>
         </>}
@@ -40,4 +41,4 @@ function FileTreeLine({
   );
 };
 
-export default FileTreeLine;
+export default FileTreeDocumentLine;
