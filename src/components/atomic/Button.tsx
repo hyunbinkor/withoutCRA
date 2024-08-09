@@ -1,20 +1,22 @@
-import { Children } from "react";
+import { Children, ReactNode } from "react";
 import Svg from "./Svg";
 
 interface Props {
   btnIcon?: // 이거 리스트 만들어서 대체해야 할듯?
     'folder' | 
     'file' |
-    'toggle',
-  btnIconColor: string,
-  btnHasToggle: boolean,
-  btnToggleSeperate: boolean,
-  btnSize: 'small' | 'medium',
-  btnBackgroundColor: string,
-  btnHasBorder: boolean,
-  btnBorderColor: string,
+    'toggle' |
+    'past',
+  btnIconColor?: string,
+  btnHasToggle?: boolean,
+  btnToggleSeperate?: boolean,
+  btnSize?: 'small' | 'medium',
+  btnBackgroundColor?: string,
+  btnHasBorder?: boolean,
+  btnBorderColor?: string,
   btnHandleClick: () => (void),
   btnHandleToggleClick?: () => (void),
+  children?: ReactNode,
 }
 
 function Button({
@@ -28,6 +30,7 @@ function Button({
   btnBorderColor='gray-300',
   btnHandleClick,
   btnHandleToggleClick,
+  children,
 }: Props) {
   
   if (btnHasToggle && btnToggleSeperate) {
@@ -44,7 +47,7 @@ function Button({
         >
           {btnIcon && <Svg color={btnIconColor} icon={btnIcon} />}
         </button>
-          {Children}
+        {Children}
         <button
           className={[
             `btn-${btnSize}`,
@@ -70,10 +73,7 @@ function Button({
         onClick={btnHandleClick}
       >
         {btnIcon && <Svg color={btnIconColor} icon={btnIcon} />}
-        {/* 왜 태그로 Children을 감싸야 하는가? */}
-        <>
-          {Children}
-        </>
+        {children}
         {btnHasToggle && <Svg color={btnIconColor} icon={'toggle'} />}
       </button>
     );
