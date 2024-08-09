@@ -49,7 +49,7 @@ module.exports = {
         // file-loader를 적용할 확장자 정규표현식으로 설정
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         // 사용할 loader 설정
-        use: 'file-loader',
+        loader: 'file-loader',
         options: {
           name: '[name].[ext]',
         },
