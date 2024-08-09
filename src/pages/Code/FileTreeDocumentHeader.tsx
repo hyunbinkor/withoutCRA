@@ -1,10 +1,10 @@
 function FileTreeDocumentHeader() {
   return (
-    <tr className="filetree-table-header">
-      <th className="filetree-table-header"></th>
-      <th className="filetree-table-header"></th>
-      <th className="filetree-table-header"></th>
-      <th className="filetree-table-header"></th>
+    <tr className="filetree-tableHeader">
+      <th className="filetree-tableHeader"></th>
+      <th className="filetree-tableHeader"></th>
+      <th className="filetree-tableHeader"></th>
+      <th className="filetree-tableHeader"></th>
     </tr>
   );
 };

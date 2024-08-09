@@ -1,15 +1,19 @@
 interface Props {
-  fontSize: string,
+  fontSize:
+    'px10' |
+    'px12' |
+    'px14' |
+    'px16',
   color: string,
-  isBold: boolean,
-  link: string,
+  isBold?: boolean,
+  link?: string,
   text: string,
 }
 
 function Text({
   fontSize,
   color,
-  isBold,
+  isBold=false,
   link,
   text,
 }: Props) {
