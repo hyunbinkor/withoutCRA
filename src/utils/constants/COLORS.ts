@@ -1,0 +1,21 @@
+const COLORS = {
+  WHITE: '#ffffff',
+  BLACK: '#000000',
+  GRAY_100: '#f6f8fa', // header 배경 색상
+  GRAY_200: '#e8ebef', // number 배경 색상
+  GRAY_300: '#d1d8df', // border 색상
+  GRAY_400: '#636c76', // svg 내부 색상
+  BLUE_100: '#DDF4FF', // aside 버튼 배경 색상
+  BLUE_200: '#54aeff', // svg foler 색상
+  BLUE_300: '#0969DA', // aside 버튼 글씨 색상
+  GREEN_300: '#1C8139', // code 버튼 색상
+  LANGUAGES: {
+    // aside languages 언어별 색상
+    TYPESCRIPT: '#3178C6',
+    JAVASCRIPT: '#F1E05A',
+    MDX: '#FCB32C',
+    OTHER: '#EDEDED',
+  },
+} as const;
+
+export default COLORS;
