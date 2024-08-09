@@ -30,7 +30,7 @@ module.exports = {
   // webpack에 추가적으로 설정한 loader에 대해서 설정
   module: {
     rules: [
-      // ts-loader에 대한 규칙 설정
+      // loader에 대한 규칙 설정
       {
         // ts-loader를 적용할 확장자 정규표현식으로 설정
         test: /\.(js|jsx|ts|tsx)$/i,
@@ -39,6 +39,19 @@ module.exports = {
         // 사용할 loader 설정
         use: {
           loader: 'ts-loader',
+        },
+      },{
+        // style-loader, css-loader를 적용할 확장자 정규표현식으로 설정
+        test: /\.css$/i,
+        // 사용할 loader 설정
+        use: ['style-loader', 'css-loader'],
+      },{
+        // file-loader를 적용할 확장자 정규표현식으로 설정
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        // 사용할 loader 설정
+        use: 'file-loader',
+        options: {
+          name: '[name].[ext]',
         },
       },
     ],
