@@ -38,7 +38,8 @@
       "@components/*": ["components/*"]
     } /* baseUrl을 사용시에 몇몇 경로를 단축어로 지정해두는 것 */,
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
-    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
+
+    "typeRoots": ["@/assets"] /* assets 폴더를 모듈화 */,
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
