@@ -1,16 +1,14 @@
+import '@components/Atomic/Button.css'
 import { Children, ReactNode } from "react";
 import Svg from "./Svg";
+import { SizeType, SvgType } from './Type';
 
 interface Props {
-  btnIcon?: // 이거 리스트 만들어서 대체해야 할듯?
-    'folder' | 
-    'file' |
-    'toggle' |
-    'past',
+  btnIcon?: SvgType,
   btnIconColor?: string,
   btnHasToggle?: boolean,
   btnToggleSeperate?: boolean,
-  btnSize?: 'small' | 'medium',
+  btnSize?: SizeType,
   btnBackgroundColor?: string,
   btnHasBorder?: boolean,
   btnBorderColor?: string,
@@ -21,13 +19,13 @@ interface Props {
 
 function Button({
   btnIcon,
-  btnIconColor='gray-400',
+  btnIconColor='gray_400',
   btnHasToggle=false,
   btnToggleSeperate=false,
   btnSize='medium',
-  btnBackgroundColor='gray-100',
+  btnBackgroundColor='gray_100',
   btnHasBorder=false,
-  btnBorderColor='gray-300',
+  btnBorderColor='gray_300',
   btnHandleClick,
   btnHandleToggleClick,
   children,
@@ -41,7 +39,7 @@ function Button({
             `btn-${btnSize}`,
             `background-${btnBackgroundColor}`,
             `border-${btnBorderColor}`,
-            btnHasBorder && 'border-1px',
+            btnHasBorder ? 'border-1px' : 'border-0px',
           ].join(' ')}
           onClick={btnHandleClick}
         >
@@ -53,7 +51,7 @@ function Button({
             `btn-${btnSize}`,
             `background-${btnBackgroundColor}`,
             `border-${btnBorderColor}`,
-            btnHasBorder && 'border-1px',
+            btnHasBorder ? 'border-1px' : 'border-0px',
           ].join(' ')}
           onClick={btnHandleToggleClick}
         >
@@ -68,7 +66,7 @@ function Button({
           `btn-${btnSize}`,
           `background-${btnBackgroundColor}`,
           `border-${btnBorderColor}`,
-          btnHasBorder && 'border-1px',
+          btnHasBorder ? 'border-1px' : 'border-0px',
         ].join(' ')}
         onClick={btnHandleClick}
       >

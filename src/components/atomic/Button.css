@@ -1,0 +1,36 @@
+/* button */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+}
+/* size */
+.btn-medium {
+  padding: 8px 7px;
+  height: 32px;
+  border-radius: 4px;
+}
+/* background color */
+.background-gray_100 {
+  background-color: var(--GRAY_100);
+}
+/* border color */
+.border-gray_300 {
+  border-color: var(--GRAY_300);
+}
+/* border width */
+.border-0px {
+  border: 0px;
+}
+.border-1px {
+  border-width: 1px;
+  border-style: solid;
+}
+/* margin */
+.btn-margin-left {
+  margin-left: 8px;
+}
+.btn-margin-right {
+  margin-right: 8px;
+}
