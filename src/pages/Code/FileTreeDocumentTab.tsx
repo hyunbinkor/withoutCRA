@@ -3,7 +3,6 @@ import useFromDate from "@/utils/hook/useFromDate";
 
 import Text from "@/components/Atomic/Text";
 import Button from "@/components/Atomic/Button";
-import Svg from "@/components/Atomic/Svg";
 
 function FileTreeDocumentTab() {
   const lastCommit = getLastCommit();
