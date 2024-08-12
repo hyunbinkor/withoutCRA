@@ -1,0 +1,15 @@
+svg {
+  display: inline-block; /* 선택적인거 같긴 함? */
+  user-select: none;
+  vertical-align: text-bottom;
+  overflow: visible;
+}
+
+svg.blue_200 {
+  color: var(--BLUE_200);
+  fill: var(--BLUE_200);
+}
+svg.gray_400 {
+  color: var(--GRAY_400);
+  fill: var(--GRAY_400);
+}
