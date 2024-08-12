@@ -1,3 +1,5 @@
+import '@components/Atomic/Text.css'
+
 interface Props {
   fontSize:
     'px10' |
