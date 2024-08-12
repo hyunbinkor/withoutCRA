@@ -32,7 +32,7 @@
     "module": "Node16" /* Node16의 모듈 시스템을 따르도록 설정. (ECMA와 CommonJS를 포용) */,
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
     "moduleResolution": "Node16" /* 모듈 해석 알고리즘을 Node16에 맞추도록 설정 */,
-    "baseUrl": "./src" /* 상대 경로 기반의 모듈 경로 설정을 폐기하고, 절대 경로만으로 변경하며 그 root를 설정 */,
+    "baseUrl": "src" /* 상대 경로 기반의 모듈 경로 설정을 폐기하고, 절대 경로만으로 변경하며 그 root를 설정 */,
     "paths": {
       "@/*": ["*"],
       "@components/*": ["components/*"]

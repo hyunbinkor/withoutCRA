@@ -4,6 +4,8 @@ const path = require('path');
 // 번들링 후 생성된 js를 import하는 html을 자동으로 생성하는 plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+console.log(path.resolve(__dirname, 'src'));
+
 module.exports = {
   // 기본 출력을 읽기 편한 개발모드로 설정
   mode: 'development',
@@ -25,6 +27,7 @@ module.exports = {
     alias: {
       // @ 기호로 src인 것을 대체
       '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
     }
   },
   // webpack에 추가적으로 설정한 loader에 대해서 설정
@@ -69,7 +72,9 @@ module.exports = {
   // 로컬 개발 서버 설정
   devServer: {
     // localhost:8080에서 실행할 파일 경로 설정
-    static: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     // HMR 제공 여부 설정
     hot: true,
     // 서버 시작 후 브라우저 열지에 대한 설정
