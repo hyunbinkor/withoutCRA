@@ -25,7 +25,7 @@ function Text({
         className={[
           fontSize,
           color,
-          isBold && 'bold',
+          isBold ? 'bold' : 'notBold',
         ].join(' ')}
         href={link}
       >{text}</a>
@@ -36,7 +36,7 @@ function Text({
         className={[
           fontSize,
           color,
-          isBold && 'bold',
+          isBold ? 'bold' : 'notBold',
         ].join(' ')}
       >{text}</p>
     );
