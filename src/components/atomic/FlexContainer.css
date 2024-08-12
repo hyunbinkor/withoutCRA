@@ -1,0 +1,18 @@
+/* default */
+.flex_container {
+  display: flex;
+  align-items: center;
+}
+/* justify-contents */
+.flex_container-space_between {
+  justify-content: space-between;
+}
+.flex_container-center {
+  justify-content: center;
+}
+.flex_container-left {
+  justify-content: left;
+}
+.flex_container-right {
+  justify-content: right;
+}
