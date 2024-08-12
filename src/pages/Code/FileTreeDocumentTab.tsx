@@ -48,10 +48,6 @@ function FileTreeDocumentTab() {
               // 임시 땜빵 함수
               () => console.log('https://github.com/react-bootstrap/react-bootstrap/commits/master/')}
           >
-            <Svg
-              color='gray_400'
-              icon='past'
-            />
             <Text
               fontSize='px12'
               color='black'
