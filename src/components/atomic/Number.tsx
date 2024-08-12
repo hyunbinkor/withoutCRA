@@ -6,6 +6,8 @@ interface Props {
   text: string,
 };
 
+// Number 대신 그냥 Boundary로 ㄱㄱ -> 색상 커스텀 좀 하면 여기저기 쓰일듯
+
 function Number({
   fontSize,
   color,
