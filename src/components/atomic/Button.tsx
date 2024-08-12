@@ -1,36 +1,35 @@
-import '@components/Atomic/Button.css'
-import { Children, ReactNode } from "react";
-import Svg from "./Svg";
-import { SizeType, SvgType } from './Type';
+import '@components/atomic/Button.css';
+import { Children, ReactNode } from 'react';
+import Svg from '@components/atomic/Svg';
+import { SizeType, SvgType } from '@components/atomic/Type';
 
 interface Props {
-  btnIcon?: SvgType,
-  btnIconColor?: string,
-  btnHasToggle?: boolean,
-  btnToggleSeperate?: boolean,
-  btnSize?: SizeType,
-  btnBackgroundColor?: string,
-  btnHasBorder?: boolean,
-  btnBorderColor?: string,
-  btnHandleClick: () => (void),
-  btnHandleToggleClick?: () => (void),
-  children?: ReactNode,
+  btnIcon?: SvgType;
+  btnIconColor?: string;
+  btnHasToggle?: boolean;
+  btnToggleSeperate?: boolean;
+  btnSize?: SizeType;
+  btnBackgroundColor?: string;
+  btnHasBorder?: boolean;
+  btnBorderColor?: string;
+  btnHandleClick: () => void;
+  btnHandleToggleClick?: () => void;
+  children?: ReactNode;
 }
 
 function Button({
   btnIcon,
-  btnIconColor='gray_400',
-  btnHasToggle=false,
-  btnToggleSeperate=false,
-  btnSize='medium',
-  btnBackgroundColor='gray_100',
-  btnHasBorder=false,
-  btnBorderColor='gray_300',
+  btnIconColor = 'gray_400',
+  btnHasToggle = false,
+  btnToggleSeperate = false,
+  btnSize = 'medium',
+  btnBackgroundColor = 'gray_100',
+  btnHasBorder = false,
+  btnBorderColor = 'gray_300',
   btnHandleClick,
   btnHandleToggleClick,
   children,
 }: Props) {
-  
   if (btnHasToggle && btnToggleSeperate) {
     return (
       <>
@@ -75,7 +74,7 @@ function Button({
         {btnHasToggle && <Svg color={btnIconColor} icon={'toggle'} />}
       </button>
     );
-  };
-};
+  }
+}
 
 export default Button;
