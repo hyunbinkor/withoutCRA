@@ -1,16 +1,26 @@
 import userIcon from '@/assets/header-upper-right-user-icon.png';
+
+import getRepositoryInfo from '@/utils/api/getRepositoryInfo';
+
 import Button from '@/components/atomic/Button';
 import FlexContainer from '@/components/atomic/FlexContainer';
-import getRepositoryInfo from '@/utils/api/getRepositoryInfo';
 import Text from '@/components/atomic/Text';
+import ImageButton from '@/components/atomic/ImageButton';
+import FlexRowContainer from '@/components/atomic/FlexRowContainer';
 
 function Header() {
   const repositoryInfo = getRepositoryInfo();
 
   return (
-    <header>
-      <FlexContainer tag="nav" className="header-upper">
-        <FlexContainer className="header-upper-left" justifyContents="left">
+    <FlexRowContainer tag='header'>
+      <FlexContainer
+        tag="nav"
+        className="header-upper">
+        <FlexContainer
+          className="header-upper-left"
+          justifyContents="flex_start"
+          gap={6}
+        >
           <Button
             btnIcon="menu"
             btnHasBorder
@@ -18,11 +28,13 @@ function Header() {
           />
           <Button
             btnIcon="logo"
+            btnLogo
+            btnIconColor='black'
             btnHandleClick={() => console.log('logo button')}
           />
           <FlexContainer
             className="header-upper-left-repository"
-            justifyContents="left"
+            justifyContents="flex_start"
           >
             <Button
               btnHandleClick={() => console.log('go to Repository owner')}
@@ -48,7 +60,11 @@ function Header() {
             </Button>
           </FlexContainer>
         </FlexContainer>
-        <FlexContainer className="header-upper-right" justifyContents="right">
+        <FlexContainer
+          className="header-upper-right"
+          justifyContents="flex_end"
+          gap={4}
+        >
           <Button
             btnIcon="search"
             btnHasBorder
@@ -57,12 +73,21 @@ function Header() {
             <Text fontSize="px14" color="black" text="Type " />
             <Text fontSize="px14" color="black" text="/" />
             <Text fontSize="px14" color="black" text=" to search" />
-          </Button>
-          <div className="header-upper-right-slash"></div>
+          </Button>      
           <FlexContainer
             className="header-upper-right-buttons"
-            justifyContents="right"
+            justifyContents="flex_end"
+            gap={4}
           >
+            <div
+              className="header-upper-right-slash"
+              style={{
+                width: '1px',
+                height: '20px',
+                backgroundColor: '#d1d8df',
+                margin: '4px'
+              }}
+            />
             <Button
               btnIcon="create"
               btnHasToggle
@@ -85,16 +110,18 @@ function Header() {
               btnHandleClick={() => console.log('notification btn clicked')}
             />
           </FlexContainer>
-          <div className="header-upper-right-user">
-            <img
-              className="header-upper-right-user-icon"
-              src={userIcon}
-              alt=""
+            <ImageButton
+              btnImg={userIcon}
+              btnHandleClick={() => console.log('user icon clicked')}
             />
-          </div>
         </FlexContainer>
       </FlexContainer>
-      <FlexContainer tag="nav" className="header-lower" justifyContents="left">
+      <FlexContainer
+        tag="nav"
+        className="header-lower"
+        justifyContents="flex_start"
+        gap={6}
+      >
         <Button
           btnIcon="code"
           btnHandleClick={() => console.log('code btn clicked')}
@@ -144,7 +171,7 @@ function Header() {
           <Text fontSize="px14" color="black" text="Insights" />
         </Button>
       </FlexContainer>
-    </header>
+    </FlexRowContainer>
   );
 }
 

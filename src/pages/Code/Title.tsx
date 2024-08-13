@@ -1,31 +1,51 @@
 import FlexContainer from '@/components/atomic/FlexContainer';
+import ImageButton from '@/components/atomic/ImageButton';
+import Text from '@/components/atomic/Text';
+
+import RepoIcon from '@/assets/title-left-repository-icon.png'
+import Button from '@/components/atomic/Button';
+import Boundary from '@/components/atomic/Boundary';
 
 function Title() {
   return (
     <FlexContainer className="title">
-      <FlexContainer className="title-left" justifyContents="left">
-        <div className="title-left-repository">
-          <div className="title-left-repository-icon">
-            <img
-              className="title-left-repository-icon-img"
-              src="./assets/title-left-repository-icon.png"
-              alt=""
-            />
-          </div>
-          <div className="title-left-repository-text">
-            <a className="title-left-repository-text-link" href="">
-              react-bootstrap
-            </a>
-          </div>
-        </div>
-        <div className="title-left-ispublic">
-          <button className="title-left-ispublic-button disabled">
-            Public
-          </button>
-        </div>
+      <FlexContainer
+        className="title-left"
+        justifyContents="flex_start"
+        gap={5}>
+        <ImageButton
+          btnSize='mini'
+          btnImg={RepoIcon}
+          btnIsRec
+          btnHandleClick={() => console.log('repo button clicked')}
+        >
+        </ImageButton>
+        <Text
+          fontSize='px18'
+          color='black'
+          isBold
+          text='react-bootstrap'
+          link='https://github.com/react-bootstrap/react-bootstrap'
+        />
+        <Boundary
+          hasBorder
+          backgroundColor='white'
+          borderColor='gray_300'
+        >
+          <Text
+            fontSize='px12'
+            color='gray_400'
+            isBold
+            text='Public'
+          />
+        </Boundary>
       </FlexContainer>
-      <FlexContainer className="title-right" justifyContents="right">
-        <button className="title-right-watch-button">
+      <FlexContainer
+        className="title-right"
+        justifyContents="flex_end"
+        gap={4}
+      >
+        {/* <button className="title-right-watch-button">
           <div className="title-right-watch-icon">
             <svg
               className="title-right-watch-icon-eye"
@@ -141,71 +161,53 @@ function Title() {
               </div>
             </div>
           </div>
-        </button>
-        <button className="title-right-fork-button">
-          <div className="title-right-fork-icon">
-            <svg
-              aria-hidden="true"
-              height="16"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="16"
-              data-view-component="true"
-              className="octicon octicon-repo-forked mr-2"
-            >
-              <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path>
-            </svg>
-          </div>
-          <div className="title-right-fork-text">Fork</div>
-          <div className="title-right-fork-number">3.6k</div>
-        </button>
-        <button className="title-right-fork-toggle-button">
-          <div className="title-right-fork-toggle-button-icon">
-            <svg
-              aria-hidden="true"
-              height="16"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="16"
-              data-view-component="true"
-              className="octicon octicon-triangle-down"
-            >
-              <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
-            </svg>
-          </div>
-        </button>
-        <button className="title-right-star-button">
-          <div className="title-right-star-icon">
-            <svg
-              aria-hidden="true"
-              height="16"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="16"
-              data-view-component="true"
-              className="octicon octicon-star d-inline-block mr-2"
-            >
-              <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
-            </svg>
-          </div>
-          <div className="title-right-star-text">Star</div>
-          <div className="title-right-star-number">22.3k</div>
-        </button>
-        <button className="title-right-star-toggle-button">
-          <div className="title-right-star-toggle-button-icon">
-            <svg
-              aria-hidden="true"
-              height="16"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="16"
-              data-view-component="true"
-              className="octicon octicon-triangle-down"
-            >
-              <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
-            </svg>
-          </div>
-        </button>
+        </button> */}
+        <Button
+          btnIcon='fork'
+          btnSize='small'
+          btnHasBorder
+          btnHasToggle
+          btnToggleSeperate
+          btnHandleClick={() => console.log('fork button clicked')}
+        >
+          <Text
+            fontSize='px12'
+            color='black'
+            text='Fork'
+          />
+          <Boundary
+            backgroundColor='gray_200'
+          >
+            <Text
+              fontSize='px12'
+              color='black'
+              text='3.6k'
+            />
+          </Boundary>
+        </Button>
+        <Button
+          btnIcon='star'
+          btnSize='small'
+          btnHasBorder
+          btnHasToggle
+          btnToggleSeperate
+          btnHandleClick={() => console.log('star button clicked')}
+        >
+          <Text
+            fontSize='px12'
+            color='black'
+            text='Star'
+          />
+          <Boundary
+            backgroundColor='gray_200'
+          >
+            <Text
+              fontSize='px12'
+              color='black'
+              text='22.3k'
+            />
+          </Boundary>
+        </Button>
       </FlexContainer>
     </FlexContainer>
   );

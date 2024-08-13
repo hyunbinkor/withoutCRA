@@ -26,10 +26,28 @@ export type SvgType =
   | 'tag'
   | 'license'
   | 'book'
-  | 'link';
+  | 'link'
+  | 'success'
+  | 'dialogue'
+  | 'fail';
 
-export type SizeType = 'small' | 'medium';
+export type SizeType = 'mini' | 'small' | 'medium';
 
-export type JustContType = 'left' | 'center' | 'right' | 'space_between';
+export type JustContType =
+  | 'flex_start'
+  | 'center'
+  | 'flex_end'
+  | 'space_between';
 
-export type TagType = 'div' | 'nav' | 'header' | 'footer';
+export type AlignItemType = 'start' | 'center' | 'stretch';
+
+export type FlexTagType = 'div' | 'nav';
+
+export type FlexRowTagType =
+  | 'div'
+  | 'header'
+  | 'footer'
+  | 'aside'
+  | 'main'
+  | 'article'
+  | 'nav';
