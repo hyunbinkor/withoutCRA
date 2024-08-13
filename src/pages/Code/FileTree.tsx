@@ -10,12 +10,16 @@ function FileTree() {
 
   return (
     <main className="filetree">
-          <table className="filetree-table">
-            <FileTreeDocumentHeader />
-            <FileTreeDocumentTab />
-            {fileTree.map((file) => FileTreeDocumentLine(file))}
-          </table>
-        </main>
+      <table className="filetree-table">
+        <thead>
+          <FileTreeDocumentHeader />
+        </thead>
+        <tbody>
+          <FileTreeDocumentTab />
+          {fileTree.map((file) => FileTreeDocumentLine(file))}
+        </tbody>
+      </table>
+    </main>
   );
 };
 

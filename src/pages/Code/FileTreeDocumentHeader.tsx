@@ -4,7 +4,6 @@ function FileTreeDocumentHeader() {
       <th className="filetree-tableHeader"></th>
       <th className="filetree-tableHeader"></th>
       <th className="filetree-tableHeader"></th>
-      <th className="filetree-tableHeader"></th>
     </tr>
   );
 };
