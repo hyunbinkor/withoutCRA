@@ -1,0 +1,52 @@
+/* default */
+.imgbtn {
+  box-sizing: content-box;
+  border-radius: 50%;
+  padding: 0;
+}
+.imgbtnrec {
+  box-sizing: content-box;
+  border-radius: 20%;
+  padding: 0;
+}
+.imgbtn:hover,
+.imgbtnrec:hover {
+  cursor: pointer;
+}
+/* size */
+.imgbtn-mini {
+  width: 24px;
+  height: 24px;
+}
+.imgbtn-small {
+  width : 28px;
+  height: 28px;
+}
+.imgbtn-medium {
+  width: 32px;
+  height: 32px;
+}
+/* border color */
+.imgbtn-border-white {
+  border-color: var(--WHITE);
+}
+.imgbtn-border-gray_300 {
+  border-color: var(--GRAY_300);
+}
+/* border width */
+.imgbtn-border-1px {
+  border-width: 1px;
+  border-style: solid;
+}
+.imgbtn-border-2px {
+  border-width: 2px;
+  border-style: solid;
+}
+.imgbtn-border-3px {
+  border-width: 3px;
+  border-style: solid;
+}
+.imgbtn-border-4px {
+  border-width: 4px;
+  border-style: solid;
+}
