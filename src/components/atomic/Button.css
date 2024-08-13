@@ -1,37 +1,120 @@
 /* button */
-button {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: none;
 }
+.btn:hover {
+  cursor: pointer;
+}
+.btn-toggle-seperate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
 /* size */
+.btn-logo {
+  padding: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
 .btn-medium {
   padding: 8px 7px;
   height: 32px;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+.btn-body-medium {
+  padding: 8px 7px;
+  height: 32px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.btn-toggle-medium {
+  padding: 8px 7px;
+  height: 32px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.btn-small {
+  padding: 8px 7px;
+  height: 28px;
+  border-radius: 6px;
+}
+.btn-body-small {
+  padding: 8px 7px;
+  height: 28px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.btn-toggle-small {
+  padding: 8px 7px;
+  height: 28px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 /* background color */
-.background-gray_100 {
+.btn-background-white {
+  background-color: var(--WHITE);
+}
+.btn-background-gray_100 {
   background-color: var(--GRAY_100);
 }
 /* border color */
-.border-gray_300 {
+.btn-border-gray_300 {
   border-color: var(--GRAY_300);
 }
 /* border width */
-.border-0px {
+.btn-border-0px {
   border: 0px;
 }
-.border-1px {
+.btn-border-1px {
   border-width: 1px;
   border-style: solid;
 }
-/* margin */
-.btn-margin-left {
-  margin-left: 8px;
+/* gap */
+.btn-gap_0 {
+  column-gap: 0px;
 }
-.btn-margin-right {
-  margin-right: 8px;
+
+.btn-gap_1 {
+  column-gap: 1px;
 }
-/* 얘네 대신에 gap 한 번 ㄱㄱ */
+
+.btn-gap_2 {
+  column-gap: 2px;
+}
+
+.btn-gap_3 {
+  column-gap: 3px;
+}
+
+.btn-gap_4 {
+  column-gap: 4px;
+}
+
+.btn-gap_5 {
+  column-gap: 5px;
+}
+
+.btn-gap_6 {
+  column-gap: 6px;
+}
+
+.btn-gap_7 {
+  column-gap: 7px;
+}
+
+.btn-gap_8 {
+  column-gap: 8px;
+}
+
+.btn-gap_9 {
+  column-gap: 9px;
+}
+
+.btn-gap_10 {
+  column-gap: 10px;
+}

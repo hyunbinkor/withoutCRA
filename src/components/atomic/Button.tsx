@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
+
 import '@components/atomic/Button.css';
-import { Children, ReactNode } from 'react';
-import Svg from '@components/atomic/Svg';
-import { SizeType, SvgType } from '@components/atomic/Type';
+import Svg from '@/components/atomic/Svg';
+import { SizeType, SvgType } from '@/components/atomic/Type';
 
 interface Props {
   btnIcon?: SvgType;
@@ -9,9 +10,11 @@ interface Props {
   btnHasToggle?: boolean;
   btnToggleSeperate?: boolean;
   btnSize?: SizeType;
+  btnLogo?: boolean;
   btnBackgroundColor?: string;
   btnHasBorder?: boolean;
   btnBorderColor?: string;
+  btnGap?: number,
   btnHandleClick: () => void;
   btnHandleToggleClick?: () => void;
   children?: ReactNode;
@@ -23,49 +26,56 @@ function Button({
   btnHasToggle = false,
   btnToggleSeperate = false,
   btnSize = 'medium',
+  btnLogo = false,
   btnBackgroundColor = 'gray_100',
   btnHasBorder = false,
   btnBorderColor = 'gray_300',
+  btnGap = 5,
   btnHandleClick,
   btnHandleToggleClick,
   children,
 }: Props) {
   if (btnHasToggle && btnToggleSeperate) {
     return (
-      <>
+      <div className='btn-toggle-seperate'>
         <button
           className={[
-            `btn-${btnSize}`,
-            `background-${btnBackgroundColor}`,
-            `border-${btnBorderColor}`,
-            btnHasBorder ? 'border-1px' : 'border-0px',
+            'btn',
+            `btn-body-${btnSize}`,
+            `btn-background-${btnBackgroundColor}`,
+            `btn-border-${btnBorderColor}`,
+            btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
+            `btn-gap_${btnGap}`,
           ].join(' ')}
           onClick={btnHandleClick}
         >
           {btnIcon && <Svg color={btnIconColor} icon={btnIcon} />}
+          {children}
         </button>
-        {Children}
         <button
           className={[
-            `btn-${btnSize}`,
-            `background-${btnBackgroundColor}`,
-            `border-${btnBorderColor}`,
-            btnHasBorder ? 'border-1px' : 'border-0px',
+            'btn',
+            `btn-toggle-${btnSize}`,
+            `btn-background-${btnBackgroundColor}`,
+            `btn-border-${btnBorderColor}`,
+            btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
           ].join(' ')}
           onClick={btnHandleToggleClick}
         >
           {btnIcon && <Svg color={btnIconColor} icon={'toggle'} />}
         </button>
-      </>
+      </div>
     );
   } else {
     return (
       <button
         className={[
-          `btn-${btnSize}`,
-          `background-${btnBackgroundColor}`,
-          `border-${btnBorderColor}`,
-          btnHasBorder ? 'border-1px' : 'border-0px',
+         'btn',
+          btnLogo ? 'btn-logo' : `btn-${btnSize}`,
+          `btn-background-${btnBackgroundColor}`,
+          `btn-border-${btnBorderColor}`,
+          btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
+          `btn-gap_${btnGap}`,
         ].join(' ')}
         onClick={btnHandleClick}
       >
