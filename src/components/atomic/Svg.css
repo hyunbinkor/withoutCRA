@@ -1,3 +1,4 @@
+/* default */
 svg {
   display: inline-block; /* 선택적인거 같긴 함? */
   user-select: none;
@@ -5,6 +6,7 @@ svg {
   overflow: visible;
 }
 
+/* color */
 svg.blue_200 {
   color: var(--BLUE_200);
   fill: var(--BLUE_200);
@@ -12,4 +14,12 @@ svg.blue_200 {
 svg.gray_400 {
   color: var(--GRAY_400);
   fill: var(--GRAY_400);
+}
+svg.green_300 {
+  color: var(--GREEN_300);
+  fill: var(--GREEN_300);
+}
+svg.red_300 {
+  color: var(--RED_300);
+  fill: var(--RED_300);
 }
