@@ -1,0 +1,44 @@
+/* default */
+.bdry {
+  height: 20px;
+  border-radius: 10px;
+  padding: 0px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* has border */
+.bdry-border-0px {
+  border-style: solid;
+  border-width: 0px;
+}
+.bdry-border-1px {
+  border-style: solid;
+  border-width: 1px;
+}
+/* border color */
+.bdry-border-gray_300 {
+  border-color: var(--GRAY_300);
+}
+/* background color */
+.bdry-background-green_300 {
+  background-color: var(--GREEN_300);
+}
+.bdry-background-blue_100 {
+  background-color: var(--BLUE_100);
+}
+.bdry-background-blue_300 {
+  background-color: var(--BLUE_300);
+}
+.bdry-background-gray_100 {
+  background-color: var(--GRAY_100);
+}
+.bdry-background-gray_200 {
+  background-color: var(--GRAY_200);
+}
+.bdry-background-gray_300 {
+  background-color: var(--GRAY_300);
+}
+.bdry-background-gray_400 {
+  background-color: var(--GRAY_400);
+}
