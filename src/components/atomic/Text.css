@@ -16,6 +16,12 @@ a {
 .px16 {
   font-size: 16px;
 }
+.px18 {
+  font-size: 18px;
+}
+.px20 {
+  font-size: 20px;
+}
 /* color */
 p.white,
 a.white {
