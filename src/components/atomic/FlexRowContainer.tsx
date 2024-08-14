@@ -8,6 +8,9 @@ interface Props {
   justifyContents?: JustContType;
   alignItems?: AlignItemType;
   gap?: number;
+  columnPadding?: number;
+  maxWidth?: number;
+  hasBottom?: boolean;
   children: ReactNode;
 }
 
@@ -18,7 +21,10 @@ function FlexRowContainer({
   className,
   justifyContents = 'flex_start',
   alignItems ='stretch',
-  gap=5,
+  gap = 5,
+  columnPadding = 0,
+  maxWidth,
+  hasBottom = false,
   children,
 }: Props) {
   switch (tag) {
@@ -31,7 +37,12 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
+          }
         >
           {children}
         </div>
@@ -45,7 +56,17 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? {
+              maxWidth: `${maxWidth}px`,
+              backgroundColor: '#F6F8FA'
+            } : {
+              backgroundColor: '#F6F8FA'
+            }
+          }
         >
           {children}
         </header>
@@ -59,7 +80,12 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
+          }
         >
           {children}
         </footer>
@@ -73,7 +99,12 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
+          }
         >
           {children}
         </main>
@@ -87,7 +118,12 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
+          }
         >
           {children}
         </article>
@@ -101,7 +137,12 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
+          }
         >
           {children}
         </aside>
@@ -115,7 +156,12 @@ function FlexRowContainer({
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
             `flex_row_container-gap_${gap}`,
+            `flex_row_container-padding_${columnPadding}`,
+            hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
+          style={
+            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
+          }
         >
           {children}
         </nav>
