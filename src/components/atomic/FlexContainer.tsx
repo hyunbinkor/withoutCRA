@@ -8,6 +8,7 @@ interface Props {
   alignItems?: AlignItemType;
   className?: string;
   gap?: number;
+  rowPadding?: number;
   children: ReactNode;
 }
 
@@ -16,7 +17,8 @@ function FlexContainer({
   justifyContents='space_between',
   alignItems='center',
   className,
-  gap=0,
+  gap = 0,
+  rowPadding = 0,
   children,
 }: Props) {
   switch (tag) {
@@ -28,7 +30,8 @@ function FlexContainer({
             'flex_container',
             `flex_container-${justifyContents}`,
             `flex_container-align-${alignItems}`,
-            `flex_container-gap_${gap}`
+            `flex_container-gap_${gap}`,
+            `flex_container-padding_${rowPadding}`,
           ].join(' ')}
         >
           {children}
@@ -42,7 +45,8 @@ function FlexContainer({
             'flex_container',
             `flex_container-${justifyContents}`,
             `flex_container-align-${alignItems}`,
-            `flex_container-gap_${gap}`
+            `flex_container-gap_${gap}`,
+            `flex_container-padding_${rowPadding}`,
           ].join(' ')}
         >
           {children}

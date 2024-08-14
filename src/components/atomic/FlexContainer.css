@@ -56,3 +56,37 @@
 .flex_container-gap_10 {
   column-gap: 20px;
 }
+/* column padding */
+.flex_container-padding_0 {
+  padding: 0px 0px;
+}
+.flex_container-padding_1 {
+  padding: 0px 2px;
+}
+.flex_container-padding_2 {
+  padding: 0px 4px;
+}
+.flex_container-padding_3 {
+  padding: 0px 6px;
+}
+.flex_container-padding_4 {
+  padding: 0px 8px;
+}
+.flex_container-padding_5 {
+  padding: 0px 10px;
+}
+.flex_container-padding_6 {
+  padding: 0px 12px;
+}
+.flex_container-padding_7 {
+  padding: 0px 14px;
+}
+.flex_container-padding_8 {
+  padding: 0px 16px;
+}
+.flex_container-padding_9 {
+  padding: 0px 18px;
+}
+.flex_container-padding_10 {
+  padding: 0px 20px;
+}
