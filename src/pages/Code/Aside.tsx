@@ -5,7 +5,7 @@ import Text from "@/components/atomic/Text";
 import contributors from "@/assets/contributors";
 import Boundary from "@/components/atomic/Boundary";
 import List from "@/components/atomic/List";
-import ImageButton from "@/components/atomic/ImageButton";
+import ImageButton from "@/components/atomic/ImageButton";9
 
 function Aside() {
   return (
