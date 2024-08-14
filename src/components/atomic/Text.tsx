@@ -1,14 +1,19 @@
 import '@components/atomic/Text.css';
 
 interface Props {
-  fontSize: 'px10' | 'px12' | 'px14' | 'px16' | 'px18' | 'px20';
-  color: string;
+  fontSize?: 'px10' | 'px12' | 'px14' | 'px16' | 'px18' | 'px20';
+  color?: string;
   isBold?: boolean;
   link?: string;
   text: string;
 }
 
-function Text({ fontSize, color, isBold = false, link, text }: Props) {
+function Text({
+  fontSize = 'px14',
+  color = 'black',
+  isBold = false,
+  link,
+  text }: Props) {
   if (link) {
     return (
       <a

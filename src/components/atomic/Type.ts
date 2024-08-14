@@ -28,8 +28,10 @@ export type SvgType =
   | 'book'
   | 'link'
   | 'success'
+  | 'success_background'
   | 'dialogue'
-  | 'fail';
+  | 'fail'
+  | 'activity';
 
 export type SizeType = 'mini' | 'small' | 'medium';
 
