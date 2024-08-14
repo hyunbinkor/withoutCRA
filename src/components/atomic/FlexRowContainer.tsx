@@ -16,9 +16,9 @@ interface Props {
 function FlexRowContainer({
   tag = 'div',
   className,
-  justifyContents,
-  alignItems,
-  gap=0,
+  justifyContents = 'flex_start',
+  alignItems ='stretch',
+  gap=5,
   children,
 }: Props) {
   switch (tag) {
@@ -30,7 +30,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
@@ -44,7 +44,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
@@ -58,7 +58,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
@@ -72,7 +72,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
@@ -86,7 +86,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
@@ -100,7 +100,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
@@ -114,7 +114,7 @@ function FlexRowContainer({
             'flex_row_container',
             `flex_row_container-${justifyContents}`,
             `flex_row_container-align-${alignItems}`,
-            `flex_row_container-gap-${gap}`,
+            `flex_row_container-gap_${gap}`,
           ].join(' ')}
         >
           {children}
