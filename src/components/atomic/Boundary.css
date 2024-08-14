@@ -20,6 +20,9 @@
 .bdry-border-gray_300 {
   border-color: var(--GRAY_300);
 }
+.bdry-border-green_300 {
+  border-color: var(--GREEN_300);
+}
 /* background color */
 .bdry-background-green_300 {
   background-color: var(--GREEN_300);
