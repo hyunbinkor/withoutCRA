@@ -12,10 +12,12 @@ function Header() {
   const repositoryInfo = getRepositoryInfo();
 
   return (
-    <FlexRowContainer tag='header'>
+    <FlexRowContainer tag='header' hasBottom columnPadding={4}>
       <FlexContainer
         tag="nav"
-        className="header-upper">
+        className="header-upper"
+        rowPadding={8}
+      >
         <FlexContainer
           className="header-upper-left"
           justifyContents="flex_start"
@@ -121,6 +123,7 @@ function Header() {
         className="header-lower"
         justifyContents="flex_start"
         gap={6}
+        rowPadding={8}
       >
         <Button
           btnIcon="code"

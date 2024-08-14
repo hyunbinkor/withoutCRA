@@ -10,10 +10,10 @@ import FlexRowContainer from "@/components/atomic/FlexRowContainer";
 function Code() {
 
   return (
-    <FlexRowContainer>
+    <FlexRowContainer justifyContents="center">
       <Title />
-      <FlexContainer alignItems="start">
-        <FlexRowContainer tag="main">
+      <FlexContainer justifyContents="center" alignItems="start">
+        <FlexRowContainer tag="main" gap={5} columnPadding={10} maxWidth={896}>
           <SubTitle />
           <FileTree />
           <Markdown />

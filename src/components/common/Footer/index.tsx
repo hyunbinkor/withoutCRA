@@ -2,53 +2,85 @@ import FlexContainer from "@/components/atomic/FlexContainer";
 import FlexRowContainer from "@/components/atomic/FlexRowContainer";
 import Button from "@/components/atomic/Button";
 import Text from "@/components/atomic/Text";
+import List from "@/components/atomic/List";
 
 function Footer() {
   return (
-    <FlexRowContainer>
+    <FlexRowContainer columnPadding={10}>
       <FlexContainer
-        justifyContents="flex_start"
-        gap={4}
+        justifyContents="center"
+        gap={10}
       >
-        <Button
-          btnIcon="logo"
-          btnLogo
-          btnIconColor='gray_400'
-          btnHandleClick={() => console.log('logo button')}
-        />
-        <Text
-          fontSize="px12"
-          color="gray_400"
-          text="© 2024 GitHub, Inc."
-        />
-      </FlexContainer>
-      <FlexContainer>
-        <ul className="footer-navigation-list">
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Terms</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Privacy</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Security</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Status</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Docs</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Contact</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Manage cookies</a>
-          </li>
-          <li className="footer-navigation-list-item">
-            <a href="" className="footer-navigation-list-text blue">Do not share my personal information</a>
-          </li>
-        </ul>
+        <FlexContainer
+          justifyContents="flex_start"
+          gap={4}
+        >
+          <Button
+            btnIcon="logo"
+            btnLogo
+            btnIconColor='gray_400'
+            btnHandleClick={() => console.log('logo button')}
+          />
+          <Text
+            fontSize="px12"
+            color="gray_400"
+            text="© 2024 GitHub, Inc."
+          />
+        </FlexContainer>
+        <FlexContainer>
+          <List gap={7}>
+            {[
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Terms"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Privacy"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Security"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Status"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Docs"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Contact"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Manage Cookies"
+                link=""
+              />,
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Do not share my personal information"
+                link=""
+              />,            
+            ]}
+          </List>
+        </FlexContainer>
       </FlexContainer>
     </FlexRowContainer>
   );

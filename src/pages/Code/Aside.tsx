@@ -4,16 +4,21 @@ import Svg from "@/components/atomic/Svg";
 import Text from "@/components/atomic/Text";
 import contributors from "@/assets/contributors";
 import Boundary from "@/components/atomic/Boundary";
+import List from "@/components/atomic/List";
+import ImageButton from "@/components/atomic/ImageButton";
 
 function Aside() {
   return (
     <FlexRowContainer
       tag="aside"
       gap={0}
+      maxWidth={296}
     >
       <FlexRowContainer
         className="aside-about"
         gap={10}
+        hasBottom
+        columnPadding={10}
       >
         <Text
           fontSize="px16"
@@ -43,26 +48,64 @@ function Aside() {
           />
         </FlexContainer>
         <FlexContainer>
-          <ul className="aside-about-tag-list">
-            <li className="aside-about-tag-item">
-              react
-            </li>
-            <li className="aside-about-tag-item">
-              javascript
-            </li>
-            <li className="aside-about-tag-item">
-              bootstrap
-            </li>
-            <li className="aside-about-tag-item">
-              typescript
-            </li>
-            <li className="aside-about-tag-item">
-              react-componenets
-            </li>
-            <li className="aside-about-tag-item">
-              hacktoberfest
-            </li>
-          </ul>
+          <List>
+            {[
+              <Boundary
+                backgroundColor="blue_100"
+              >
+                <Text
+                  fontSize="px12"
+                  color="blue_300"
+                  text="react"
+                />
+              </Boundary>,
+              <Boundary
+                backgroundColor="blue_100"
+              >
+                <Text
+                  fontSize="px12"
+                  color="blue_300"
+                  text="javascript"
+                />
+              </Boundary>,
+              <Boundary
+                backgroundColor="blue_100"
+              >
+                <Text
+                  fontSize="px12"
+                  color="blue_300"
+                  text="bootstrap"
+                />
+              </Boundary>,
+              <Boundary
+                backgroundColor="blue_100"
+              >
+                <Text
+                  fontSize="px12"
+                  color="blue_300"
+                  text="typescript"
+                />
+              </Boundary>,
+              <Boundary
+                backgroundColor="blue_100"
+              >
+                <Text
+                  fontSize="px12"
+                  color="blue_300"
+                  text="react-components"
+                />
+              </Boundary>,
+              <Boundary
+                backgroundColor="blue_100"
+              >
+                <Text
+                  fontSize="px12"
+                  color="blue_300"
+                  text="hacktoberfest"
+                />
+              </Boundary>,
+            ]}
+          </List>
         </FlexContainer>
         <FlexRowContainer>
           <FlexContainer
@@ -76,6 +119,7 @@ function Aside() {
             <Text
               color="gray_400"
               text="Readme"
+              link="https://github.com/react-bootstrap/react-bootstrap#readme-ov-file"
             />
           </FlexContainer>
           <FlexContainer
@@ -89,6 +133,7 @@ function Aside() {
             <Text
               color="gray_400"
               text="MIT License"
+              link="https://github.com/react-bootstrap/react-bootstrap#MIT-1-ov-file"
             />
           </FlexContainer>
           <FlexContainer
@@ -102,6 +147,7 @@ function Aside() {
             <Text
               color="gray_400"
               text="Activity"
+              link="https://github.com/react-bootstrap/react-bootstrap/activity"
             />
           </FlexContainer>
           <FlexContainer
@@ -115,6 +161,7 @@ function Aside() {
             <Text
               color="gray_400"
               text="Custom Properties"
+              link="https://github.com/react-bootstrap/react-bootstrap/custom-properties"
             />
           </FlexContainer>
           <FlexContainer
@@ -133,6 +180,7 @@ function Aside() {
             <Text
               color="gray_400"
               text="stars"
+              link="https://github.com/react-bootstrap/react-bootstrap/stargazers"
             />
           </FlexContainer>
           <FlexContainer
@@ -151,6 +199,7 @@ function Aside() {
             <Text
               color="gray_400"
               text="watching"
+              link="https://github.com/react-bootstrap/react-bootstrap/watchers"
             />
           </FlexContainer>
           <FlexContainer
@@ -169,15 +218,21 @@ function Aside() {
             <Text
               color="gray_400"
               text="forks"
+              link="https://github.com/react-bootstrap/react-bootstrap/forks"
             />
           </FlexContainer>
           <Text
             color="gray_400"
             text="Report Repository"
+            link="https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Freact-bootstrap%2Freact-bootstrap&report=react-bootstrap+%28user%29"
           />
         </FlexRowContainer>
       </FlexRowContainer>
-      <FlexRowContainer className="aside-releases">
+      <FlexRowContainer
+        className="aside-releases"
+        hasBottom
+        columnPadding={10}
+      >
         <FlexContainer
           justifyContents="flex_start"
           gap={4}
@@ -234,7 +289,11 @@ function Aside() {
           link="https://github.com/react-bootstrap/react-bootstrap/releases"
         />
       </FlexRowContainer>
-      <FlexRowContainer className="aside-packages">
+      <FlexRowContainer
+        className="aside-packages"
+        hasBottom
+        columnPadding={10}
+      >
         <Text
           fontSize="px16"
           isBold
@@ -246,7 +305,11 @@ function Aside() {
           text="No packages published"
         />
       </FlexRowContainer>
-      <FlexRowContainer className="aside-contributors">
+      <FlexRowContainer
+        className="aside-contributors"
+        hasBottom
+        columnPadding={10}
+      >
         <FlexContainer
           justifyContents="flex_start"
           gap={4}
@@ -264,57 +327,77 @@ function Aside() {
             />
           </Boundary>
         </FlexContainer>
-        <ul className="aside-contributors-list">
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_1} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_2} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_3} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_4} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_5} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_6} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_7} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_8} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_9} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_10} alt=""/>            
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_11} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_12} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_13} alt=""/>
-          </li>
-          <li className="aside-contributors-item">
-            <img className="aside-contributors-item-img" src={contributors.ctrb_14} alt=""/>
-          </li>
-        </ul>
+        <List gap={3}>
+          {[
+            <ImageButton
+              btnImg={contributors.ctrb_1}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_2}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_3}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_4}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_5}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_6}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_7}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_8}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_9}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_10}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_11}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_12}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_13}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+            <ImageButton
+              btnImg={contributors.ctrb_14}
+              btnHandleClick={() => console.log('contributors icon clicked')}
+            />,
+          ]}
+        </List>
         <Text
           color="blue_300"
           text="+ 461 contributors"
           link="https://github.com/react-bootstrap/react-bootstrap/graphs/contributors"
         />
       </FlexRowContainer>
-      <FlexRowContainer className="aside-deployments">
+      <FlexRowContainer
+        className="aside-deployments"
+        hasBottom
+        columnPadding={10}
+      >
         <FlexContainer
           justifyContents="flex_start"
           gap={4}
@@ -352,75 +435,85 @@ function Aside() {
           />
         </FlexContainer>
       </FlexRowContainer>
-      <FlexRowContainer className="aside-languages">
+      <FlexRowContainer className="aside-languages" columnPadding={10}>
         <Text
           fontSize="px16"
           color="black"
           isBold
           text="Languages"
         />
-        <div className="aside-languages-ratio">
-          <div className="aside-language-ratio-diagram">
-            <div className="aside-language-ratio-diagram-ts blue">
-
-            </div>
-            <div className="aside-language-ratio-diagram-js yellow">
-
-            </div>
-            <div className="aside-language-ratio-diagram-mdx orange">
-
-            </div>
-            <div className="aside-language-ratio-diagram-other gray">
-
-            </div>
-          </div>
-          <div className="aside-language-ratio-rate">
-            <div className="aside-language-ratio-rate-ts">
-              <div className="aside-language-ratio-rate-ts-color blue">
-
-              </div>
-              <div className="aside-language-ratio-rate-ts-text">
-                TypeScript
-              </div>
-              <div className="aside-language-ratio-rate-ts-subtext">
-                65.2%
-              </div>
-            </div>
-            <div className="aside-language-ratio-rate-js">
-              <div className="aside-language-ratio-rate-js-color yellow">
-
-              </div>
-              <div className="aside-language-ratio-rate-js-text">
-                JavaScript
-              </div>
-              <div className="aside-language-ratio-rate-js-subtext">
-                22.1%
-              </div>
-            </div>
-            <div className="aside-language-ratio-rate-mdx">
-              <div className="aside-language-ratio-rate-mdx-color orange">
-
-              </div>
-              <div className="aside-language-ratio-rate-mdx-text">
-                MDX
-              </div>
-              <div className="aside-language-ratio-rate-mdx-subtext">
-                11.8%
-              </div>
-            </div>
-            <div className="aside-language-ratio-rate-other">
-              <div className="aside-language-ratio-rate-other-color gray">
-
-              </div>
-              <div className="aside-language-ratio-rate-other-text">
-                Other
-              </div>
-              <div className="aside-language-ratio-rate-other-subtext">
-                0.9%
-              </div>
-            </div>
-          </div>
-        </div>
+        <List>
+          {[
+            <FlexContainer
+              gap={8}
+            >
+              <FlexContainer
+                gap={4}
+              >
+                <Text
+                  fontSize="px12"
+                  isBold
+                  text="TypeScript"
+                />
+                <Text
+                  fontSize="px12"
+                  text="65.3%"
+                />
+              </FlexContainer>
+            </FlexContainer>,
+            <FlexContainer
+              gap={8}
+            >
+              <FlexContainer
+                gap={4}
+              >
+                <Text
+                  fontSize="px12"
+                  isBold
+                  text="JavaScript"
+                />
+                <Text
+                  fontSize="px12"
+                  text="22.0%"
+                />
+              </FlexContainer>
+            </FlexContainer>,
+            <FlexContainer
+              gap={8}
+            >
+              <FlexContainer
+                gap={4}
+              >
+                <Text
+                  fontSize="px12"
+                  isBold
+                  text="MDX"
+                />
+                <Text
+                  fontSize="px12"
+                  text="11.8%"
+                />
+              </FlexContainer>
+            </FlexContainer>,
+            <FlexContainer
+              gap={8}
+            >
+              <FlexContainer
+                gap={4}
+              >
+                <Text
+                  fontSize="px12"
+                  isBold
+                  text="Other"
+                />
+                <Text
+                  fontSize="px12"
+                  text="0.9%"
+                />
+              </FlexContainer>
+            </FlexContainer>,
+          ]}
+        </List>
       </FlexRowContainer>
     </FlexRowContainer>
   );
