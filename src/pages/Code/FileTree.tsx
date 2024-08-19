@@ -4,13 +4,15 @@ import FileTreeDocumentLine from "./FileTreeDocumentLine";
 
 import getFileTree from "@/utils/api/getFileTree";
 
+import '@/pages/Code/FileTree.css'
+
 function FileTree() {
 
   const fileTree = getFileTree();
 
   return (
     <main className="filetree">
-      <table className="filetree-table">
+      <table className="filetree-table" style={{borderCollapse: 'collapse'}}>
         <thead>
           <FileTreeDocumentHeader />
         </thead>

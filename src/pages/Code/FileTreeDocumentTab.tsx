@@ -17,6 +17,10 @@ function FileTreeDocumentTab() {
       <td
         className='filetree-tab-td'
         colSpan={3}
+        style={{
+          backgroundColor: "#F6F8FA",
+          padding: '8px 6px',
+        }}
       >
         <FlexContainer className='filetree-tab-container'>
           <FlexContainer

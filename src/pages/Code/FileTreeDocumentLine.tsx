@@ -1,4 +1,6 @@
+import FlexContainer from '@/components/atomic/FlexContainer';
 import Svg from '@/components/atomic/Svg';
+import Text from '@/components/atomic/Text';
 import useFromDate from '@/utils/hook/useFromDate';
 
 interface Props {
@@ -21,27 +23,53 @@ function FileTreeDocumentLine({
   return (
     <tr className="filetree-document-line">
       <td className="filetree-document-line-filename">
-        {isFolder ? (
-          <Svg color={'blue_200'} icon={'folder'} />
-        ) : (
-          <Svg color={'gray_400'} icon={'file'} />
-        )}
-        <a className="px14 black">{fileName}</a>
+        <FlexContainer
+          justifyContents='flex_start'
+          gap={4}
+        >
+          {isFolder ? (
+            <Svg color={'blue_200'} icon={'folder'} />
+          ) : (
+            <Svg color={'gray_400'} icon={'file'} />
+          )}
+          <Text
+            text={fileName}
+            link={"https://github.com/react-bootstrap/react-bootstrap"}
+          />
+        </FlexContainer>
       </td>
       <td className="filetree-document-line-commitmessage">
-        <a className="px14 gray_400">{commitMessage}</a>
+        <Text
+          color='gray_400'
+          text={commitMessage}
+          link={"https://github.com/react-bootstrap/react-bootstrap"}
+        />
         {mergeNumber && (
           <>
-            <a className="px14 gray_400"> (</a>
-            <a className="px14 blue_300" href="">{`#${mergeNumber}`}</a>
-            <a className="px14 gray_400" href="">
-              )
-            </a>
+            <Text
+              color='gray_400'
+              text=' ('
+              link={"https://github.com/react-bootstrap/react-bootstrap"}
+            />
+            <Text
+              color='blue_300'
+              text={`#${mergeNumber}`}
+              link={"https://github.com/react-bootstrap/react-bootstrap"}
+            />
+            <Text
+              color='gray_400'
+              text=')'
+              link={"https://github.com/react-bootstrap/react-bootstrap"}
+            />
           </>
         )}
       </td>
       <td className="filetree-document-line-modifieddate">
-        <a className="px14 gray_400">{fromCommitDate}</a>
+        <Text
+          color='gray_400'
+          text={fromCommitDate}
+          link={"https://github.com/react-bootstrap/react-bootstrap"}
+        />
       </td>
     </tr>
   );
