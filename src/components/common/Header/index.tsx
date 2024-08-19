@@ -12,7 +12,7 @@ function Header() {
   const repositoryInfo = getRepositoryInfo();
 
   return (
-    <FlexRowContainer tag='header' hasBottom columnPadding={4}>
+    <FlexRowContainer tag='header' hasBottom columnPadding={4} grayBackground>
       <FlexContainer
         tag="nav"
         className="header-upper"
@@ -67,15 +67,17 @@ function Header() {
           justifyContents="flex_end"
           gap={4}
         >
-          <Button
-            btnIcon="search"
-            btnHasBorder
-            btnHandleClick={() => console.log('search button clicked')}
-          >
-            <Text fontSize="px14" color="black" text="Type " />
-            <Text fontSize="px14" color="black" text="/" />
-            <Text fontSize="px14" color="black" text=" to search" />
-          </Button>      
+          <FlexRowContainer maxWidth={1000}>
+            <Button
+              btnIcon="search"
+              btnHasBorder
+              btnHandleClick={() => console.log('search button clicked')}
+            >
+              <Text fontSize="px14" color="black" text="Type " />
+              <Text fontSize="px14" color="black" text="/" />
+              <Text fontSize="px14" color="black" text=" to search" />
+            </Button>      
+          </FlexRowContainer>
           <FlexContainer
             className="header-upper-right-buttons"
             justifyContents="flex_end"

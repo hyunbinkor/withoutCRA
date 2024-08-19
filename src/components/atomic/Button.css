@@ -39,8 +39,8 @@
   border-bottom-right-radius: 6px;
 }
 .btn-small {
-  padding: 8px 7px;
-  height: 28px;
+  padding: 1px 6px;
+  height: 24px;
   border-radius: 6px;
 }
 .btn-body-small {
@@ -61,6 +61,9 @@
 }
 .btn-background-gray_100 {
   background-color: var(--GRAY_100);
+}
+.btn-background-green_300 {
+  background-color: var(--GREEN_300);
 }
 /* border color */
 .btn-border-gray_300 {
