@@ -2,6 +2,7 @@ import Button from "@/components/atomic/Button";
 import FlexContainer from "@/components/atomic/FlexContainer";
 import FlexRowContainer from "@/components/atomic/FlexRowContainer";
 import Text from "@/components/atomic/Text";
+import '@/pages/Code/SubTitle.css'
 
 function SubTitle() {
   return (
@@ -66,10 +67,14 @@ function SubTitle() {
         >
           <Button
             btnIcon="search"
+            btnBackgroundColor="white"
+            btnHasBorder
             btnHandleClick={() => console.log('file search!')}
           >
-            <input className="subtitle-right-searchbar-text tarnished" placeholder="Go to file" type="text" />
+            <input placeholder="Go to file" type="text"/>
             <Button
+              btnSize="small"
+              btnHasBorder
               btnHandleClick={() => console.log('tab buttonclicked')}
             >
               <Text
@@ -87,18 +92,22 @@ function SubTitle() {
             <Text
               fontSize="px14"
               color="black"
+              isBold
               text="AddFile"
             />
           </Button>
           <Button
             btnIcon="code"
+            btnIconColor="white"
+            btnBackgroundColor="green_300"
             btnHasBorder
             btnHasToggle
             btnHandleClick={() => console.log('download code?')}
           >
             <Text
               fontSize="px14"
-              color="black"
+              color="white"
+              isBold
               text="Code"
             />
           </Button>
