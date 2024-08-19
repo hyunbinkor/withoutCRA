@@ -11,7 +11,13 @@ interface Props {
   columnPadding?: number;
   maxWidth?: number;
   hasBottom?: boolean;
+  grayBackground?: boolean;
   children: ReactNode;
+}
+
+interface Style {
+  maxWidth?: number;
+  backgroundColor?: string;
 }
 
 // 나중에는 grid로 전체적인 부분을 대체해서 사이 사이 div가 안들어가도록 처리
@@ -25,8 +31,13 @@ function FlexRowContainer({
   columnPadding = 0,
   maxWidth,
   hasBottom = false,
+  grayBackground = false,
   children,
 }: Props) {
+  let style : Style = {};
+  if (maxWidth) style.maxWidth = maxWidth;
+  if (grayBackground) style.backgroundColor = '#F6F8FA';
+
   switch (tag) {
     case 'div':
       return (
@@ -40,9 +51,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
-          }
+          style={style}
         >
           {children}
         </div>
@@ -59,14 +68,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? {
-              maxWidth: `${maxWidth}px`,
-              backgroundColor: '#F6F8FA'
-            } : {
-              backgroundColor: '#F6F8FA'
-            }
-          }
+          style={style}
         >
           {children}
         </header>
@@ -83,9 +85,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
-          }
+          style={style}
         >
           {children}
         </footer>
@@ -102,9 +102,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
-          }
+          style={style}
         >
           {children}
         </main>
@@ -121,9 +119,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
-          }
+          style={style}
         >
           {children}
         </article>
@@ -140,9 +136,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
-          }
+          style={style}
         >
           {children}
         </aside>
@@ -159,9 +153,7 @@ function FlexRowContainer({
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
           ].join(' ')}
-          style={
-            maxWidth ? { maxWidth: `${maxWidth}px` } : {}
-          }
+          style={style}
         >
           {children}
         </nav>
