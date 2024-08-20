@@ -3,6 +3,11 @@ tbody {
   box-shadow: var(--GRAY_300) 0px -1px, var(--GRAY_300) 1px 0px, var(--GRAY_300) -1px 0px;
 }
 
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 td:first-of-type {
   padding-left: 12px;
 }

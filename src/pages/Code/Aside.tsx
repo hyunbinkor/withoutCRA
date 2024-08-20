@@ -13,7 +13,7 @@ function Aside() {
       <FlexRowContainer
         tag="aside"
         gap={0}
-        maxWidth={256}
+        maxWidth={296}
       >
         <FlexRowContainer
           className="aside-about"

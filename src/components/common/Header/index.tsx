@@ -69,6 +69,7 @@ function Header() {
         >
           <FlexRowContainer maxWidth={1000}>
             <Button
+              btnWidth={350}
               btnIcon="search"
               btnHasBorder
               btnHandleClick={() => console.log('search button clicked')}

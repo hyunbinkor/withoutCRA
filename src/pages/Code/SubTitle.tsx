@@ -66,6 +66,7 @@ function SubTitle() {
           gap={4}
         >
           <Button
+            className="search-button"
             btnIcon="search"
             btnBackgroundColor="white"
             btnHasBorder
@@ -73,7 +74,7 @@ function SubTitle() {
           >
             <input placeholder="Go to file" type="text"/>
             <Button
-              btnSize="small"
+              btnSize="mini"
               btnHasBorder
               btnHandleClick={() => console.log('tab buttonclicked')}
             >
