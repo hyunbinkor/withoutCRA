@@ -50,6 +50,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >
@@ -67,6 +68,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >
@@ -84,6 +86,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >
@@ -101,6 +104,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >
@@ -118,6 +122,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >
@@ -135,6 +140,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >
@@ -152,6 +158,7 @@ function FlexRowContainer({
             `flex_row_container-gap_${gap}`,
             `flex_row_container-padding_${columnPadding}`,
             hasBottom ? 'flex_row_container-has_bottom' : '',
+            className,
           ].join(' ')}
           style={style}
         >

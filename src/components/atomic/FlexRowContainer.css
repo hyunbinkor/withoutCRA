@@ -12,6 +12,9 @@
   justify-content: flex-end;
 }
 /* align items */
+.flex_row_container-align-start {
+  align-items: flex-start;
+}
 .flex_row_container-align-stretch {
   align-items: stretch;
 }
