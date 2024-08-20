@@ -10,7 +10,7 @@ import WatchButton from '@/components/functional/WatchButton';
 
 function Title() {
   return (
-    <FlexRowContainer hasBottom columnPadding={8} maxWidth={1192}>
+    <FlexRowContainer hasBottom columnPadding={8}>
       <FlexContainer className="title">
         <FlexContainer
           className="title-left"

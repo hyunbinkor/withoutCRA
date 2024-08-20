@@ -56,6 +56,12 @@
 .flex_container-gap_10 {
   column-gap: 20px;
 }
+.flex_container-gap_11 {
+  column-gap: 22px;
+}
+.flex_container-gap_12 {
+  column-gap: 24px;
+}
 /* column padding */
 .flex_container-padding_0 {
   padding: 0px 0px;

@@ -9,11 +9,10 @@ import ImageButton from "@/components/atomic/ImageButton";9
 
 function Aside() {
   return (
-    <FlexContainer rowPadding={10}>
+    <FlexContainer>
       <FlexRowContainer
         tag="aside"
         gap={0}
-        maxWidth={296}
       >
         <FlexRowContainer
           className="aside-about"

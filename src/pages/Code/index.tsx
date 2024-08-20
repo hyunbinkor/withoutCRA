@@ -11,15 +11,30 @@ function Code() {
 
   return (
     <FlexRowContainer alignItems="center">
-      <Title />
-      <FlexContainer justifyContents="center" alignItems="start">
-        <FlexRowContainer tag="main" gap={5} columnPadding={10} maxWidth={896}>
-          <SubTitle />
-          <FileTree />
-          <Markdown />
-        </FlexRowContainer>
-        <Aside />
-      </FlexContainer>
+      <div style={{
+        minWidth: '704px',
+        maxWidth: '1216px',
+      }}>
+        <Title />
+        <FlexContainer justifyContents="center" alignItems="start" gap={12}>
+          <div style={{
+            flexBasis: '440px',
+            flexGrow: 57,
+          }}>
+            <FlexRowContainer tag="main" gap={5} columnPadding={10}>
+              <SubTitle />
+              <FileTree />
+              <Markdown />
+            </FlexRowContainer>
+          </div>
+          <div style={{
+            flexBasis: '240px',
+            flexGrow: 7,
+          }}>
+            <Aside />
+          </div>
+        </FlexContainer>
+      </div>
     </FlexRowContainer>
   );
 }
