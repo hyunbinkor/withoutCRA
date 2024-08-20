@@ -1,0 +1,75 @@
+/* default */
+p,
+a {
+  text-decoration: none;
+}
+/* fontSize */
+.px10 {
+  font-size: 10px;
+}
+.px12 {
+  font-size: 12px;
+}
+.px14 {
+  font-size: 14px;
+}
+.px16 {
+  font-size: 16px;
+}
+.px18 {
+  font-size: 18px;
+}
+.px20 {
+  font-size: 20px;
+}
+/* color */
+p.white,
+a.white {
+  color: var(--WHITE);
+}
+p.black,
+a.black {
+  color: var(--BLACK);
+}
+p.gray_100,
+a.gray_100 {
+  color: var(--GRAY_100);
+}
+p.gray_200,
+a.gray_200 {
+  color: var(--GRAY_200);
+}
+p.gray_300,
+a.gray_300 {
+  color: var(--GRAY_300);
+}
+p.gray_400,
+a.gray_400 {
+  color: var(--GRAY_400);
+}
+p.blue_100,
+a.blue_100 {
+  color: var(--BLUE_100);
+}
+p.blue_200,
+a.blue_200 {
+  color: var(--BLUE_200);
+}
+p.blue_300,
+a.blue_300 {
+  color: var(--BLUE_300);
+}
+p.green_300,
+a.green_300 {
+  color: var(--GREEN_300);
+}
+/* isBold */
+.bold {
+  font-weight: bold;
+}
+/* a tag */
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--BLUE_300);
+}

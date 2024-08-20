@@ -32,13 +32,14 @@
     "module": "Node16" /* Node16의 모듈 시스템을 따르도록 설정. (ECMA와 CommonJS를 포용) */,
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
     "moduleResolution": "Node16" /* 모듈 해석 알고리즘을 Node16에 맞추도록 설정 */,
-    "baseUrl": "./src" /* 상대 경로 기반의 모듈 경로 설정을 폐기하고, 절대 경로만으로 변경하며 그 root를 설정 */,
+    "baseUrl": "src" /* 상대 경로 기반의 모듈 경로 설정을 폐기하고, 절대 경로만으로 변경하며 그 root를 설정 */,
     "paths": {
       "@/*": ["*"],
       "@components/*": ["components/*"]
     } /* baseUrl을 사용시에 몇몇 경로를 단축어로 지정해두는 것 */,
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
-    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
+
+    "typeRoots": ["@/assets"] /* assets 폴더를 모듈화 */,
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */

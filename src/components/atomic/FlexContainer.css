@@ -1,0 +1,92 @@
+/* default */
+.flex_container {
+  display: flex;
+}
+/* align-items */
+.flex_container-align-start {
+  align-items: start;
+}
+.flex_container-align-center {
+  align-items: center;
+}
+/* justify-contents */
+.flex_container-space_between {
+  justify-content: space-between;
+}
+.flex_container-center {
+  justify-content: center;
+}
+.flex_container-flex_start {
+  justify-content: flex-start;
+}
+.flex_container-flex_end {
+  justify-content: flex-end;
+}
+/* gap */
+.flex_container-gap_0 {
+  column-gap: 0px;
+}
+.flex_container-gap_1 {
+  column-gap: 2px;
+}
+.flex_container-gap_2 {
+  column-gap: 4px;
+}
+.flex_container-gap_3 {
+  column-gap: 6px;
+}
+.flex_container-gap_4 {
+  column-gap: 8px;
+}
+.flex_container-gap_5 {
+  column-gap: 10px;
+}
+.flex_container-gap_6 {
+  column-gap: 12px;
+}
+.flex_container-gap_7 {
+  column-gap: 14px;
+}
+.flex_container-gap_8 {
+  column-gap: 16px;
+}
+.flex_container-gap_9 {
+  column-gap: 18px;
+}
+.flex_container-gap_10 {
+  column-gap: 20px;
+}
+/* column padding */
+.flex_container-padding_0 {
+  padding: 0px 0px;
+}
+.flex_container-padding_1 {
+  padding: 0px 2px;
+}
+.flex_container-padding_2 {
+  padding: 0px 4px;
+}
+.flex_container-padding_3 {
+  padding: 0px 6px;
+}
+.flex_container-padding_4 {
+  padding: 0px 8px;
+}
+.flex_container-padding_5 {
+  padding: 0px 10px;
+}
+.flex_container-padding_6 {
+  padding: 0px 12px;
+}
+.flex_container-padding_7 {
+  padding: 0px 14px;
+}
+.flex_container-padding_8 {
+  padding: 0px 16px;
+}
+.flex_container-padding_9 {
+  padding: 0px 18px;
+}
+.flex_container-padding_10 {
+  padding: 0px 20px;
+}

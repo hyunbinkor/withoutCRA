@@ -1,3 +1,5 @@
+// window와 unix 계열의 경로를 수용하기 위함
+const path = require('path');
 // webpack 번들링 설정을 개발 환경용 설정해두기 위해서 설정 merge 메소드 불러오기
 const { merge } = require('webpack-merge');
 // 기본으로 지정해둔 webpack 번들링 설정 불러오기
@@ -13,6 +15,10 @@ module.exports = merge(common, {
   devServer: {
     // SPA에서 모든 uri에 대해 index.html을 반환하도록 설정
     historyApiFallback: true,
+    // localhost:8080에서 실행할 파일 경로 설정
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     // 8080 포트 대신 3000 포트 사용 설정
     port: 3000,
     // HMR 지원하도록 설정

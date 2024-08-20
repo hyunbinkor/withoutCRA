@@ -1,0 +1,8 @@
+input {
+  border: 0;
+  outline: none;
+}
+
+.search-button:focus-within {
+  border: solid 2px var(--BLUE_300);
+}
