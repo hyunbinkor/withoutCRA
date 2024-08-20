@@ -9,6 +9,7 @@ interface Props {
   className?: string;
   gap?: number;
   rowPadding?: number;
+  onClick?: () => void;
   children: ReactNode;
 }
 
@@ -19,6 +20,7 @@ function FlexContainer({
   className,
   gap = 0,
   rowPadding = 0,
+  onClick,
   children,
 }: Props) {
   switch (tag) {
@@ -33,6 +35,7 @@ function FlexContainer({
             `flex_container-gap_${gap}`,
             `flex_container-padding_${rowPadding}`,
           ].join(' ')}
+          onClick={onClick}
         >
           {children}
         </div>
