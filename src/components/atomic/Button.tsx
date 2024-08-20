@@ -3,8 +3,11 @@ import { ReactNode } from 'react';
 import '@components/atomic/Button.css';
 import Svg from '@/components/atomic/Svg';
 import { SizeType, SvgType } from '@/components/atomic/Type';
+import FlexContainer from './FlexContainer';
 
 interface Props {
+  className?: string;
+  btnWidth?: number;
   btnIcon?: SvgType;
   btnIconColor?: string;
   btnHasToggle?: boolean;
@@ -21,6 +24,8 @@ interface Props {
 }
 
 function Button({
+  className,
+  btnWidth,
   btnIcon,
   btnIconColor = 'gray_400',
   btnHasToggle = false,
@@ -46,6 +51,7 @@ function Button({
             `btn-border-${btnBorderColor}`,
             btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
             `btn-gap_${btnGap}`,
+            className,
           ].join(' ')}
           onClick={btnHandleClick}
         >
@@ -59,12 +65,35 @@ function Button({
             `btn-background-${btnBackgroundColor}`,
             `btn-border-${btnBorderColor}`,
             btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
+            className,
           ].join(' ')}
           onClick={btnHandleToggleClick}
         >
           {btnIcon && <Svg color={btnIconColor} icon={'toggle'} />}
         </button>
       </div>
+    );
+  } else if(btnWidth) {
+    return (
+      <button
+        className={[
+         'btn',
+          btnLogo ? 'btn-logo' : `btn-${btnSize}`,
+          `btn-background-${btnBackgroundColor}`,
+          `btn-border-${btnBorderColor}`,
+          btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
+          `btn-gap_${btnGap}`,
+          className,
+        ].join(' ')}
+        onClick={btnHandleClick}
+        style={{width: `${btnWidth}px`}}
+      >
+        <FlexContainer className='flex_search' justifyContents='flex_start' gap={4}>
+          {btnIcon && <Svg color={btnIconColor} icon={btnIcon} />}
+          {children}
+          {btnHasToggle && <Svg color={btnIconColor} icon={'toggle'} />}
+        </FlexContainer>
+      </button>
     );
   } else {
     return (
@@ -76,6 +105,7 @@ function Button({
           `btn-border-${btnBorderColor}`,
           btnHasBorder ? 'btn-border-1px' : 'btn-border-0px',
           `btn-gap_${btnGap}`,
+          className,
         ].join(' ')}
         onClick={btnHandleClick}
       >

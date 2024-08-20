@@ -39,8 +39,8 @@
   border-bottom-right-radius: 6px;
 }
 .btn-small {
-  padding: 1px 6px;
-  height: 24px;
+  padding: 8px 7px;
+  height: 28px;
   border-radius: 6px;
 }
 .btn-body-small {
@@ -54,6 +54,11 @@
   height: 28px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+.btn-mini {
+  padding: 1px 6px;
+  height: 24px;
+  border-radius: 6px;
 }
 /* background color */
 .btn-background-white {
@@ -120,4 +125,8 @@
 
 .btn-gap_10 {
   column-gap: 10px;
+}
+/* search */
+.flex_search {
+  width: 100%;
 }
