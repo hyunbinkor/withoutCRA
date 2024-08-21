@@ -21,12 +21,9 @@ function FileTreeDocumentLine({
   const fromCommitDate = useFromDate(commitDate);
 
   return (
-    <tr className="filetree-document-line">
-      <td className="filetree-document-line-filename">
-        <FlexContainer
-          justifyContents='flex_start'
-          gap={4}
-        >
+    <tr className="filetree_document_line-tr">
+      <td className="filetree_document_line_filename-td">
+        <FlexContainer className="filetree_document_line_filename-flex" justifyContent='flex-start' alignItems='center' gap='8px'>
           {isFolder ? (
             <Svg color={'blue_200'} icon={'folder'} />
           ) : (
@@ -38,7 +35,7 @@ function FileTreeDocumentLine({
           />
         </FlexContainer>
       </td>
-      <td className="filetree-document-line-commitmessage">
+      <td className="filetree_document_line_commitmessage-td">
         <Text
           color='gray_400'
           text={commitMessage}
@@ -64,7 +61,7 @@ function FileTreeDocumentLine({
           </>
         )}
       </td>
-      <td className="filetree-document-line-modifieddate">
+      <td className="filetree_document_line_modifieddate-td">
         <Text
           color='gray_400'
           text={fromCommitDate}

@@ -11,11 +11,8 @@ function FileTree() {
   const fileTree = getFileTree();
 
   return (
-    <main className="filetree">
-      <table className="filetree-table" style={{borderCollapse: 'collapse'}}>
-        <thead>
-          <FileTreeDocumentHeader />
-        </thead>
+    <main className="filetree" style={{width: '100%'}}>
+      <table className="filetree-table" style={{borderCollapse: 'collapse', width: '100%'}}>
         <tbody>
           <FileTreeDocumentTab />
           {fileTree.map((file) => FileTreeDocumentLine(file))}

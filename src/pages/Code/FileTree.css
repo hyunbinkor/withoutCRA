@@ -2,18 +2,27 @@ tbody {
   border-radius: 6px;
   box-shadow: var(--GRAY_300) 0px -1px, var(--GRAY_300) 1px 0px, var(--GRAY_300) -1px 0px;
 }
-
-td {
-  padding-top: 10px;
-  padding-bottom: 10px;
+td.filtree_tab-td {
+  padding: 0px;
 }
 
-td:first-of-type {
-  padding-left: 12px;
+td.filetree_document_line_filename-td {
+  padding: 10px 16px;
+  flex-basis: 175px;
+  flex-grow: 2;
 }
 
-td:last-of-type {
-  padding-right: 12px;
+td.filetree_document_line_commitmessage-td {
+  padding: 10px 16px;
+  flex-basis: 142px;
+  flex-grow: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td.filetree_document_line_modifieddate-td {
+  padding: 10px 16px 10px 0px;
+  width: 120px;
 }
 
 tr:first-of-type {
@@ -23,12 +32,17 @@ tr:first-of-type {
 }
 
 tr:last-of-type {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-tr.filetree-tab,
-tr.filetree-document-line {
+tr.filetree_tab-tr {
+  box-shadow: var(--GRAY_300) 0px 1px;
+}
+tr.filetree_document_line-tr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   box-shadow: var(--GRAY_300) 0px 1px;
 }
 
