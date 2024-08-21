@@ -2,6 +2,7 @@
 p,
 a {
   text-decoration: none;
+  text-wrap: nowrap;
 }
 /* fontSize */
 .px10 {

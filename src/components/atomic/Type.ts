@@ -35,11 +35,13 @@ export type SvgType =
 
 export type SizeType = 'mini' | 'small' | 'medium';
 
-export type JustContType =
-  | 'flex_start'
+export type FlexDirectionType = 'column' | 'row';
+
+export type JustifyContentType =
+  | 'flex-start'
   | 'center'
-  | 'flex_end'
-  | 'space_between';
+  | 'flex-end'
+  | 'space-between';
 
 export type AlignItemType = 'start' | 'center' | 'stretch';
 
