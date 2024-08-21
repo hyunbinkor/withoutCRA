@@ -1,61 +1,44 @@
-import '@components/atomic/FlexContainer.css';
-import { ReactNode } from 'react';
-import { JustContType, FlexTagType, AlignItemType } from '@/components/atomic/Type';
+import { ReactNode } from "react";
+import { FlexDirectionType, JustifyContentType, AlignItemType } from "./Type";
 
-interface Props {
-  tag?: FlexTagType;
-  justifyContents?: JustContType;
-  alignItems?: AlignItemType;
-  className?: string;
-  gap?: number;
-  rowPadding?: number;
-  onClick?: () => void;
-  children: ReactNode;
+export interface FlexContainerProps {
+  className?: string,
+  children: ReactNode,
+  flexDirection?: FlexDirectionType,
+  justifyContent?: JustifyContentType,
+  alignItems?: AlignItemType,
+  gap?: string,
 }
 
 function FlexContainer({
-  tag='div',
-  justifyContents='space_between',
-  alignItems='center',
   className,
-  gap = 0,
-  rowPadding = 0,
-  onClick,
   children,
-}: Props) {
-  switch (tag) {
-    case 'div':
-      return (
-        <div
-          className={[
-            className,
-            'flex_container',
-            `flex_container-${justifyContents}`,
-            `flex_container-align-${alignItems}`,
-            `flex_container-gap_${gap}`,
-            `flex_container-padding_${rowPadding}`,
-          ].join(' ')}
-          onClick={onClick}
-        >
-          {children}
-        </div>
-      );
-    case 'nav':
-      return (
-        <nav
-          className={[
-            className,
-            'flex_container',
-            `flex_container-${justifyContents}`,
-            `flex_container-align-${alignItems}`,
-            `flex_container-gap_${gap}`,
-            `flex_container-padding_${rowPadding}`,
-          ].join(' ')}
-        >
-          {children}
-        </nav>
-      );
-  }
-}
+  flexDirection = 'row',
+  justifyContent = 'space-between',
+  alignItems = 'start',
+  gap,
+}: FlexContainerProps) {
+
+  const style = {
+    display: 'flex',
+    width: '100%',
+    flexDirection,
+    justifyContent,
+    alignItems,
+    gap,
+  };
+
+  return (
+    <div
+      className={[
+        'flex_conatainer',
+        className,
+      ].join(' ')}
+      style={style}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default FlexContainer;
