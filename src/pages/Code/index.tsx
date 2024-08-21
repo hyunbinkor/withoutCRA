@@ -4,38 +4,29 @@ import FileTree from "./FileTree";
 import Markdown from "./Markdown";
 import Aside from "./Aside";
 import FlexContainer from "@/components/atomic/FlexContainer";
-import FlexRowContainer from "@/components/atomic/FlexRowContainer";
+import StyleContainer from "@/components/atomic/StyleContainer";
 
 
 function Code() {
 
   return (
-    <FlexRowContainer alignItems="center">
-      <div style={{
-        minWidth: '704px',
-        maxWidth: '1216px',
-      }}>
+    <FlexContainer flexDirection='column' alignItems="center">
+      <StyleContainer maxWidth="1216px" flexBasis='704px'>
         <Title />
-        <FlexContainer justifyContents="center" alignItems="start" gap={12}>
-          <div style={{
-            flexBasis: '440px',
-            flexGrow: 57,
-          }}>
-            <FlexRowContainer tag="main" gap={5} columnPadding={10}>
+        <FlexContainer justifyContent="center" alignItems="start" gap="24px">
+          <StyleContainer padding="20px 0px" flexBasis="404px" flexGrow={57}>
+            <FlexContainer flexDirection="column" gap="10px" >
               <SubTitle />
               <FileTree />
               <Markdown />
-            </FlexRowContainer>
-          </div>
-          <div style={{
-            flexBasis: '240px',
-            flexGrow: 7,
-          }}>
+            </FlexContainer>
+          </StyleContainer>
+          <StyleContainer padding="8px 0px" flexBasis="240px" flexGrow={7}>
             <Aside />
-          </div>
+          </StyleContainer>
         </FlexContainer>
-      </div>
-    </FlexRowContainer>
+      </StyleContainer>
+    </FlexContainer>
   );
 }
 

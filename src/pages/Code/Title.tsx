@@ -1,21 +1,24 @@
+import StyleContainer from '@/components/atomic/StyleContainer';
 import FlexContainer from '@/components/atomic/FlexContainer';
-import ImageButton from '@/components/atomic/ImageButton';
-import Text from '@/components/atomic/Text';
 
-import RepoIcon from '@/assets/title-left-repository-icon.png'
+import Text from '@/components/atomic/Text';
 import Button from '@/components/atomic/Button';
 import Boundary from '@/components/atomic/Boundary';
-import FlexRowContainer from '@/components/atomic/FlexRowContainer';
+import ImageButton from '@/components/atomic/ImageButton';
 import WatchButton from '@/components/functional/WatchButton';
+import RepoIcon from '@/assets/title-left-repository-icon.png'
+
+import COLORS from '@/utils/constants/COLORS';
 
 function Title() {
   return (
-    <FlexRowContainer hasBottom columnPadding={8}>
-      <FlexContainer className="title">
-        <FlexContainer
-          className="title-left"
-          justifyContents="flex_start"
-          gap={5}>
+    <StyleContainer
+      className='title-style'
+      borderBottom={`solid 1px ${COLORS.GRAY_300}`}
+      padding='16px 0px'
+    >
+      <FlexContainer className="title-flex">
+        <FlexContainer className="title_left-flex" justifyContent="flex-start" gap='10px'>
           <ImageButton
             btnSize='mini'
             btnImg={RepoIcon}
@@ -43,11 +46,7 @@ function Title() {
             />
           </Boundary>
         </FlexContainer>
-        <FlexContainer
-          className="title-right"
-          justifyContents="flex_end"
-          gap={4}
-        >
+        <FlexContainer className="title_right-flex" justifyContent="flex-end" gap='8px'>
           <WatchButton/>
           <Button
             btnIcon='fork'
@@ -97,7 +96,7 @@ function Title() {
           </Button>
         </FlexContainer>
       </FlexContainer>
-    </FlexRowContainer>
+    </StyleContainer>
   );
 }
 

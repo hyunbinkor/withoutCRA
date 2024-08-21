@@ -1,20 +1,15 @@
-import FlexContainer from "@/components/atomic/FlexContainer";
-import FlexRowContainer from "@/components/atomic/FlexRowContainer";
+import StyleContainer from '@/components/atomic/StyleContainer';
+import FlexContainer from '@/components/atomic/FlexContainer';
+import List from "@/components/atomic/List";
+
 import Button from "@/components/atomic/Button";
 import Text from "@/components/atomic/Text";
-import List from "@/components/atomic/List";
 
 function Footer() {
   return (
-    <FlexRowContainer columnPadding={10}>
-      <FlexContainer
-        justifyContents="center"
-        gap={10}
-      >
-        <FlexContainer
-          justifyContents="flex_start"
-          gap={4}
-        >
+    <StyleContainer className='footer-style' padding='64px 0px 40px 0px'>
+      <FlexContainer className='footer-flex' justifyContent="center" gap='20px'>
+        <FlexContainer className='footer_logo-flex' justifyContent='center' alignItems='center' gap='8px'>
           <Button
             btnIcon="logo"
             btnLogo
@@ -26,8 +21,6 @@ function Footer() {
             color="gray_400"
             text="© 2024 GitHub, Inc."
           />
-        </FlexContainer>
-        <FlexContainer>
           <List gap={7}>
             {[
               <Text
@@ -82,7 +75,7 @@ function Footer() {
           </List>
         </FlexContainer>
       </FlexContainer>
-    </FlexRowContainer>
+    </StyleContainer>
   );
 };
 
