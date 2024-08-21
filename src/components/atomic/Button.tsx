@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import '@components/atomic/Button.css';
 import Svg from '@/components/atomic/Svg';
 import { SizeType, SvgType } from '@/components/atomic/Type';
-import FlexContainer from './FlexContainer';
+import FlexContainer from './FlexContainer_past';
 
 interface Props {
   className?: string;
@@ -88,7 +88,7 @@ function Button({
         onClick={btnHandleClick}
         style={{width: `${btnWidth}px`}}
       >
-        <FlexContainer className='flex_search' justifyContents='flex_start' gap={4}>
+        <FlexContainer className='flex_search' justifyContent='flex-start' gap={4}>
           {btnIcon && <Svg color={btnIconColor} icon={btnIcon} />}
           {children}
           {btnHasToggle && <Svg color={btnIconColor} icon={'toggle'} />}

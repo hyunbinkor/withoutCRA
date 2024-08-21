@@ -64,11 +64,20 @@
 .btn-background-white {
   background-color: var(--WHITE);
 }
+.btn-background-white:hover {
+  background-color: var(--HOVER_WHITE);
+}
 .btn-background-gray_100 {
   background-color: var(--GRAY_100);
 }
+.btn-background-gray_100:hover {
+  background-color: var(--HOVER_GRAY_100);
+}
 .btn-background-green_300 {
   background-color: var(--GREEN_300);
+}
+.btn-background-green_300:hover {
+  background-color: var(--HOVER_GREEN_300);
 }
 /* border color */
 .btn-border-gray_300 {
