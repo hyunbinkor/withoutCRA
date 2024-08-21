@@ -1,11 +1,14 @@
 import { useState } from "react";
+
+import FlexContainer from "../atomic/FlexContainer";
+import ClickableFlexContainer from "../atomic/ClickableFlexContainer";
+
 import Svg from "../atomic/Svg";
 import Button from "../atomic/Button";
 import Text from "../atomic/Text";
 import Boundary from "../atomic/Boundary";
-import FlexRowContainer from "../atomic/FlexRowContainer";
-import FlexContainer from "../atomic/FlexContainer";
-import '@/components/functional/WatchButton.css'
+
+import '@/components/functional/WatchButton.css';
 
 function WatchButton({ }) {
   const [watchState, setWatchState] = useState('watch');
@@ -30,25 +33,31 @@ function WatchButton({ }) {
       <Boundary>
         <Text text='422'/>
       </Boundary>
-      {watchToggleState && <FlexRowContainer className="watch-toggle" gap={0}>
-        <FlexContainer justifyContents="flex_start" alignItems="start" gap={4} onClick={() => setWatchState('watch')}>
+      {watchToggleState && <FlexContainer className="watch-toggle" flexDirection="column">
+        <ClickableFlexContainer justifyContent="flex-start" alignItems="start" gap='8px' onClick={() => setWatchState('watch')}>
           <Svg icon="success" color={watchState ==='watch' ? "black" : "white"} />
-          <FlexRowContainer alignItems="start">
+          <FlexContainer flexDirection="column" alignItems="start" gap="8px">
             <Text
               isBold
               text="Participating and @mentions"
             />
-            <Text
-              fontSize="px12"
-              color="gray_400"
-              text="Only receive notifications from this repository when
-              participating or @mentioned."
-            />
-          </FlexRowContainer>
-        </FlexContainer>
-        <FlexContainer justifyContents="flex_start" alignItems="start" gap={4} onClick={() => setWatchState('unwatch')}>
+            <FlexContainer flexDirection="column" alignItems="start">
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="Only receive notifications from this repository"
+              />
+              <Text
+                fontSize="px12"
+                color="gray_400"
+                text="when participating or @mentioned."
+              />
+            </FlexContainer>
+          </FlexContainer>
+        </ClickableFlexContainer>
+        <ClickableFlexContainer justifyContent="flex-start" alignItems="start" gap="8px" onClick={() => setWatchState('unwatch')}>
           <Svg icon="success" color={watchState ==='unwatch' ? "black" : "white"} />
-          <FlexRowContainer justifyContents="center" alignItems="start">
+          <FlexContainer flexDirection="column" alignItems="start"  gap="8px">
             <Text
               isBold
               text="All activity"
@@ -58,11 +67,11 @@ function WatchButton({ }) {
               color="gray_400"
               text="Notified of all notifications on this repository."
             />
-          </FlexRowContainer>
-        </FlexContainer>
-        <FlexContainer justifyContents="flex_start" alignItems="start" gap={4} onClick={() => setWatchState('stop')}>
+          </FlexContainer>
+        </ClickableFlexContainer>
+        <ClickableFlexContainer justifyContent="flex-start" alignItems="start" gap='8px' onClick={() => setWatchState('stop')}>
           <Svg icon="success" color={watchState ==='stop' ? "black" : "white"} />
-          <FlexRowContainer justifyContents="center" alignItems="start">
+          <FlexContainer flexDirection='column' alignItems="start" gap="8px">
             <Text
               isBold
               text="Ignore"
@@ -72,9 +81,9 @@ function WatchButton({ }) {
               color="gray_400"
               text="Never be notified."
             />
-          </FlexRowContainer>
-        </FlexContainer>
-      </FlexRowContainer>}
+          </FlexContainer>
+        </ClickableFlexContainer>
+      </FlexContainer>}
     </Button>
   );
 };
