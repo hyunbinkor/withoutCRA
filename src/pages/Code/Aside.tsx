@@ -1,5 +1,6 @@
+import StyleContainer from "@/components/atomic/StyleContainer";
 import FlexContainer from "@/components/atomic/FlexContainer";
-import FlexRowContainer from "@/components/atomic/FlexRowContainer";
+
 import Svg from "@/components/atomic/Svg";
 import Text from "@/components/atomic/Text";
 import contributors from "@/assets/contributors";
@@ -7,19 +8,15 @@ import Boundary from "@/components/atomic/Boundary";
 import List from "@/components/atomic/List";
 import ImageButton from "@/components/atomic/ImageButton";9
 
+import COLORS from "@/utils/constants/COLORS";
+import Diagram from "@/components/atomic/Diagram";
+import DiagramInfo from "@/components/atomic/DiagramInfo";
+
 function Aside() {
   return (
-    <FlexContainer>
-      <FlexRowContainer
-        tag="aside"
-        gap={0}
-      >
-        <FlexRowContainer
-          className="aside-about"
-          gap={10}
-          hasBottom
-          columnPadding={10}
-        >
+    <FlexContainer className="aside-flex" flexDirection="column">
+      <StyleContainer className="aside_about-style" borderBottom={`solid 1px ${COLORS.GRAY_300}`} padding="16px 0px">
+        <FlexContainer className="aside_about-flex" flexDirection="column" gap="16px">
           <Text
             fontSize="px16"
             color="black"
@@ -31,9 +28,7 @@ function Aside() {
             color="black"
             text="Bootstrap components built with React"
           />
-          <FlexContainer
-            justifyContents="flex_start"
-            gap={4}
+          <FlexContainer className="aside_about_link-flex" justifyContent="flex-start" gap="8px"
           >
             <Svg
               icon='link'
@@ -47,7 +42,7 @@ function Aside() {
               link="react-bootstrap.github.io/"
             />
           </FlexContainer>
-          <FlexContainer>
+          <FlexContainer className="aside_about_stack-flex">
             <List>
               {[
                 <Boundary
@@ -107,11 +102,8 @@ function Aside() {
               ]}
             </List>
           </FlexContainer>
-          <FlexRowContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+          <FlexContainer className="aside_about_menu-flex" flexDirection="column" gap="12px">
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='book'
                 color="gray_400"
@@ -122,10 +114,7 @@ function Aside() {
                 link="https://github.com/react-bootstrap/react-bootstrap#readme-ov-file"
               />
             </FlexContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='license'
                 color="gray_400"
@@ -136,10 +125,7 @@ function Aside() {
                 link="https://github.com/react-bootstrap/react-bootstrap#MIT-1-ov-file"
               />
             </FlexContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='activity'
                 color="gray_400"
@@ -150,10 +136,7 @@ function Aside() {
                 link="https://github.com/react-bootstrap/react-bootstrap/activity"
               />
             </FlexContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='dialogue'
                 color="gray_400"
@@ -164,10 +147,7 @@ function Aside() {
                 link="https://github.com/react-bootstrap/react-bootstrap/custom-properties"
               />
             </FlexContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='star'
                 color="gray_400"
@@ -183,10 +163,7 @@ function Aside() {
                 link="https://github.com/react-bootstrap/react-bootstrap/stargazers"
               />
             </FlexContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='watch'
                 color="gray_400"
@@ -202,10 +179,7 @@ function Aside() {
                 link="https://github.com/react-bootstrap/react-bootstrap/watchers"
               />
             </FlexContainer>
-            <FlexContainer
-              justifyContents="flex_start"
-              gap={4}
-            >
+            <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
               <Svg
                 icon='fork'
                 color="gray_400"
@@ -226,17 +200,12 @@ function Aside() {
               text="Report Repository"
               link="https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Freact-bootstrap%2Freact-bootstrap&report=react-bootstrap+%28user%29"
             />
-          </FlexRowContainer>
-        </FlexRowContainer>
-        <FlexRowContainer
-          className="aside-releases"
-          hasBottom
-          columnPadding={10}
-        >
-          <FlexContainer
-            justifyContents="flex_start"
-            gap={4}
-          >
+          </FlexContainer>
+        </FlexContainer>
+      </StyleContainer>
+      <StyleContainer className="aside_releases-style" borderBottom={`solid 1px ${COLORS.GRAY_300}`} padding="16px 0px">
+        <FlexContainer className="aside-releases-flex" flexDirection="column" gap="16px">
+          <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
             <Text
               fontSize="px16"
               color="black"
@@ -250,16 +219,13 @@ function Aside() {
               />
             </Boundary>
           </FlexContainer>
-          <FlexContainer
-            justifyContents="flex_start"
-            gap={4}
-          >
+          <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
             <Svg
               icon="tag"
               color="green_300"
             />
-            <FlexRowContainer gap={0}>
-              <FlexContainer justifyContents="flex_start" gap={4}>
+            <FlexContainer flexDirection="column">
+              <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
                 <Text
                   isBold
                   text="v2.10.4"
@@ -281,19 +247,17 @@ function Aside() {
                 color="gray_400"
                 text="on Jun 30"
               />
-            </FlexRowContainer>
+            </FlexContainer>
           </FlexContainer>
           <Text
             color="blue_300"
             text="+ 62 releases"
             link="https://github.com/react-bootstrap/react-bootstrap/releases"
           />
-        </FlexRowContainer>
-        <FlexRowContainer
-          className="aside-packages"
-          hasBottom
-          columnPadding={10}
-        >
+        </FlexContainer>
+      </StyleContainer>
+      <StyleContainer className="aside_packages-style" borderBottom={`solid 1px ${COLORS.GRAY_300}`} padding="16px 0px">
+        <FlexContainer className="aside_packages-flex" flexDirection="column" gap="16px">
           <Text
             fontSize="px16"
             isBold
@@ -304,16 +268,11 @@ function Aside() {
             color="gray_400"
             text="No packages published"
           />
-        </FlexRowContainer>
-        <FlexRowContainer
-          className="aside-contributors"
-          hasBottom
-          columnPadding={10}
-        >
-          <FlexContainer
-            justifyContents="flex_start"
-            gap={4}
-          >
+        </FlexContainer>
+      </StyleContainer>
+      <StyleContainer className="aside_contributors-style" borderBottom={`solid 1px ${COLORS.GRAY_300}`} padding="16px 0px">
+        <FlexContainer className="aside_contributors-flex" flexDirection="column" gap="16px">
+          <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
             <Text
               fontSize="px16"
               color="black"
@@ -392,16 +351,11 @@ function Aside() {
             text="+ 461 contributors"
             link="https://github.com/react-bootstrap/react-bootstrap/graphs/contributors"
           />
-        </FlexRowContainer>
-        <FlexRowContainer
-          className="aside-deployments"
-          hasBottom
-          columnPadding={10}
-        >
-          <FlexContainer
-            justifyContents="flex_start"
-            gap={4}
-          >
+        </FlexContainer>
+      </StyleContainer>
+      <StyleContainer className="aside_deployments-style" borderBottom={`solid 1px ${COLORS.GRAY_300}`} padding="16px 0px">
+        <FlexContainer className="aside_deployments-flex" flexDirection="column" gap="16px">
+          <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
             <Text
               fontSize="px16"
               color="black"
@@ -415,10 +369,7 @@ function Aside() {
               />
             </Boundary>
           </FlexContainer>
-          <FlexContainer
-            justifyContents="flex_start"
-            gap={4}
-          >
+          <FlexContainer justifyContent="flex-start" alignItems="center" gap='8px'>
             <Svg
               icon='success_background'
               color="green_300"
@@ -434,22 +385,27 @@ function Aside() {
               text="last year"
             />
           </FlexContainer>
-        </FlexRowContainer>
-        <FlexRowContainer className="aside-languages" columnPadding={10}>
+        </FlexContainer>
+      </StyleContainer>
+      <StyleContainer className="aside_languages-style" padding="16px 0px">
+        <FlexContainer className="aside_languages" flexDirection="column" gap="16px">
           <Text
             fontSize="px16"
             color="black"
             isBold
             text="Languages"
           />
+          <FlexContainer gap="2px">
+            <Diagram isStart color={COLORS.LANGUAGES.TYPESCRIPT} percantage={65} />
+            <Diagram color={COLORS.LANGUAGES.JAVASCRIPT} percantage={22} />
+            <Diagram color={COLORS.LANGUAGES.MDX} percantage={12} />
+            <Diagram isEnd color={COLORS.LANGUAGES.OTHER} percantage={1}/>
+          </FlexContainer>
           <List>
             {[
-              <FlexContainer
-                gap={8}
-              >
-                <FlexContainer
-                  gap={4}
-                >
+              <FlexContainer gap='8px'>
+                <FlexContainer gap='6px' alignItems="center">
+                  <DiagramInfo color={COLORS.LANGUAGES.TYPESCRIPT} />
                   <Text
                     fontSize="px12"
                     isBold
@@ -461,12 +417,9 @@ function Aside() {
                   />
                 </FlexContainer>
               </FlexContainer>,
-              <FlexContainer
-                gap={8}
-              >
-                <FlexContainer
-                  gap={4}
-                >
+              <FlexContainer gap='16px'>
+                <FlexContainer gap='8px' alignItems="center">
+                  <DiagramInfo color={COLORS.LANGUAGES.JAVASCRIPT} />
                   <Text
                     fontSize="px12"
                     isBold
@@ -478,12 +431,9 @@ function Aside() {
                   />
                 </FlexContainer>
               </FlexContainer>,
-              <FlexContainer
-                gap={8}
-              >
-                <FlexContainer
-                  gap={4}
-                >
+              <FlexContainer gap='16px' alignItems="center">
+                <DiagramInfo color={COLORS.LANGUAGES.MDX} />
+                <FlexContainer gap='8px'>
                   <Text
                     fontSize="px12"
                     isBold
@@ -495,12 +445,9 @@ function Aside() {
                   />
                 </FlexContainer>
               </FlexContainer>,
-              <FlexContainer
-                gap={8}
-              >
-                <FlexContainer
-                  gap={4}
-                >
+              <FlexContainer gap='16px'>
+                <FlexContainer gap='8px' alignItems="center">
+                  <DiagramInfo color={COLORS.LANGUAGES.OTHER} />
                   <Text
                     fontSize="px12"
                     isBold
@@ -514,8 +461,8 @@ function Aside() {
               </FlexContainer>,
             ]}
           </List>
-        </FlexRowContainer>
-      </FlexRowContainer>
+        </FlexContainer>
+      </StyleContainer>
     </FlexContainer>
   );
 };
