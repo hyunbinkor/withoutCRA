@@ -7,6 +7,15 @@
   justify-content: center;
   align-items: center;
 }
+.codebdry {
+  border-radius: 4px;
+  padding: 0px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+}
 /* has border */
 .bdry-border-0px {
   border-style: solid;
@@ -20,10 +29,16 @@
 .bdry-border-gray_300 {
   border-color: var(--GRAY_300);
 }
+.bdry-border-gray_400 {
+  border-color: var(--GRAY_400);
+}
 .bdry-border-green_300 {
   border-color: var(--GREEN_300);
 }
 /* background color */
+.bdry-background-white {
+  background-color: var(--WHITE);
+}
 .bdry-background-green_300 {
   background-color: var(--GREEN_300);
 }

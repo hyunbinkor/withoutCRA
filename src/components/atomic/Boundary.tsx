@@ -2,7 +2,7 @@ import '@components/atomic/Boundary.css'
 
 import { ReactNode } from "react";
 
-interface Props {
+interface BoundaryProps {
   hasBorder?: boolean,
   borderColor?: string,
   backgroundColor?: string,
@@ -14,7 +14,7 @@ function Boundary({
   borderColor = 'gray_300',
   backgroundColor = 'gray_200',
   children,
-}: Props) {
+}: BoundaryProps) {
   return (
     <div
       className={[
